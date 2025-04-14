@@ -572,7 +572,7 @@ footer {
 
 @media screen and (max-width: 768px) {  
   .footer {  
-      padding: 1rem; 
+      padding: 1remzl; 
   }  
   
   .footer-content,  
@@ -599,7 +599,5 @@ footer {
       width: 30px; 
       height: 30px;   
   }  
-   .cu{
-    margin-right: 50px;
-  }
+   
 }  
