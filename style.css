@@ -314,20 +314,34 @@ line-height: 2.4;
 
 .learn-more {  
   background-color: #f4f4f4;  
-
   color: #001f3f;  
   padding: 0.5rem 1rem;  
-  border-radius: 5px;  
+  border-radius: 15px;  
   text-decoration: none;  
   font-weight: bold;  
   transition: background-color 0.3s, color 0.3s;
   margin-top: 1rem;  
+  white-space: nowrap;    
+  overflow: hidden;     
+  text-overflow: ellipsis; 
+  display: flex;    
+  justify-content: center;   
+  align-items: center;      
+  height: 10vh;              
+  max-width: 400px;           
+  margin: 0 auto;           
 }  
 
 .learn-more:hover {  
   background: linear-gradient(to right, #c5c5cd, #aba5c0); 
   color: white;  
 }  
+@media screen and (max-width: 600px) {
+  .learn-more {  
+      padding: 0.5rem;  
+      font-size: 12px; 
+  }  
+}
 
 footer {  
   background: linear-gradient(to right, #1d2048, #0e2961); 
