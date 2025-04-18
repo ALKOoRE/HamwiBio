@@ -335,6 +335,7 @@ footer {
   margin: 1rem; 
   flex: 1 1 calc(30% - 2rem); 
   min-height: 250px; 
+  width: 300px;
 }  
 
 .news-content, .news-content2 .news-content3 {  
@@ -415,8 +416,8 @@ footer {
 .news-content p, .news-content2 p, .news-content3 p {  
   color: #777;  
   margin: 0; 
-}  
-
+}
+ 
 .read-more {  
   font-size: 1.5rem; 
   color: #007BFF;   
@@ -527,7 +528,8 @@ footer {
     display: flex;  
     flex-direction: column; 
     align-items: center;  
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
+    font-size: 17px;
 }  
 
 .footer-content h3,  
@@ -538,18 +540,17 @@ footer {
 
 .footer-content p,  
 .quick-links a {  
-    margin: 5px 0;   
+    margin: 5px 0;
 } 
 
 .footer-content a,  
 .quick-links a {  
-    color: #b9afaf;  
+    color: #b9afaf; 
     text-decoration: none; 
-}
-
+}  
 .footer-content a:hover,  
 .quick-links a:hover {  
-    color: #74adeb;  
+    color: #74adeb; 
     text-decoration: none; 
     transition: color 0.4s;  
 }  
@@ -560,7 +561,7 @@ footer {
 
 .social-media img {  
   width: 40px; 
-  height: 40px;   
+  height: 40px; 
 }  
 
 .social-media img:hover {  
@@ -569,9 +570,8 @@ footer {
 }  
 .cu{
   text-align: left;
+  line-height: 35px;
 }
-
-
 @media screen and (max-width: 768px) {  
   .footer {  
       padding: 1rem;  
