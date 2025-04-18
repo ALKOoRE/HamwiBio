@@ -318,6 +318,7 @@ line-height: 2.4;
   padding: 0.5rem 1rem;  
   border-radius: 15px;  
   text-decoration: none;  
+    font-size: 20px;  
   font-weight: bold;  
   transition: background-color 0.3s, color 0.3s;
   margin-top: 1rem;  
@@ -339,7 +340,7 @@ line-height: 2.4;
 @media screen and (max-width: 600px) {
   .learn-more {  
       padding: 0.5rem;  
-      font-size: 10px; 
+      font-size: 16px; 
   }  
 }
 
