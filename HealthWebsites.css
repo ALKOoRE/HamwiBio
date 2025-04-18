@@ -423,6 +423,7 @@ footer {
   }  
   .cu{
     text-align: left;
+    line-height: 35px;
   }
 
   @media screen and (max-width: 768px) {  
