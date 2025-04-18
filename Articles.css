@@ -141,29 +141,34 @@ nav ul li a:hover::after {
   #aboutUsModal:target {  
       display: block; 
   }  
-  
   .modal-content {  
-      background-color: white;  
-      margin: 10% auto; 
-      padding: 20px;  
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-      width: 90%;  
-      max-width: 500px;
-      border-radius: 10px; 
-      text-align: center; 
-      line-height:  40px;  
-      font-size: 20px;
-  }  
-  .modal-content h2 {  
-    margin-top: 0;  
-    margin-bottom: 10px; 
-    color: #0e2961; 
-  }  
-  .modal-content h3 {  
-    margin-top: 0; 
-    margin-bottom: 10px; 
-    color: #0e2961; 
-  }  
+  background-color: white;  
+  margin: 10% auto;  
+  padding: 20px;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  width: 90%;  
+  max-width: 500px;  
+  border-radius: 10px; 
+  text-align: center; 
+  line-height:  40px;  
+  font-size: 20px;
+  text-align: left;  
+  font-size: 18px;  
+  line-height: 1.6; 
+
+}  
+.modal-content h2 {  
+margin-top: 0; 
+margin-bottom: 10px; 
+color: #0e2961; 
+text-align: center;
+}  
+.modal-content h3 {  
+margin-top: 0;
+margin-bottom: 10px; 
+color: #0e2961; 
+text-align: center;
+}  
   .modal:hover{
     background-color: #f8f9fa;  
     transition: all 0.3s ease;  
