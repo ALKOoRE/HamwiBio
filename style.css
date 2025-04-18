@@ -572,18 +572,26 @@ footer {
 }
 
 
-
 @media screen and (max-width: 768px) {  
   .footer {  
-      padding: 1remzl; 
+      padding: 1rem;  
   }  
-  
-  .footer-content,  
+
+  .footer-content {  
+      text-align: center;  
+      margin-bottom: 20px; 
+  }  
+
+  .footer-links {  
+      display: flex;  
+      justify-content: space-around; 
+      flex-direction: column;
+  }  
+
   .quick-links,  
   .social-media {  
-      align-items: center;
-      margin-bottom: 15px;   
       text-align: center; 
+      margin-bottom: 15px; 
   }  
 
   .footer-content h3,  
@@ -595,12 +603,11 @@ footer {
   .footer-content p,  
   .quick-links a {  
       margin: 5px 0;  
-      font-size: 14px;
+      font-size: 14px;  
   }  
- 
+
   .social-media img {  
-      width: 30px; 
-      height: 30px;   
+      width: 30px;  
+      height: 30px;  
   }  
-   
 }  
