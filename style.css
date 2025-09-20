@@ -15,6 +15,64 @@ body {
   justify-content: center;
   align-items: center;  
 }  
+
+  .lasik2025 {
+    color: white;              /* لون الخط أبيض */
+    font-weight: 600;          /* الخط عريض قليلاً (من 100 إلى 900) */
+}
+.lasik2025 {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+  color: #333;
+}
+
+.lasik2025 p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.lasik2025 p::first-line {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.lasik2025 br + br {
+  display: none; /* إزالة الفجوات غير الضرورية */
+}
+
+.lasik2025 p strong {
+  color: #0066cc;
+}
+
+.lasik2025 ol {
+  text-align: left;
+  margin: 20px auto;
+  display: inline-block;
+  padding-left: 25px;
+  counter-reset: item;
+}
+
+.lasik2025 li {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.lasik2025 video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
 body {  
   margin: 0; 
 }  
@@ -127,27 +185,44 @@ nav ul li a:hover::after {
 }  
 
 .modal {  
-  display: none; 
-  position: fixed;   
-  z-index: 1000;   
-  left: 0;  
-  top: 0;  
-  width: 100%;   
-  height: 100%;   
-  overflow: auto;   
-  background-color: rgba(16, 16, 16, 0.9);
-  color: #234383;
-  transition: all 0.5s ease;  
+    display: none; 
+    position: fixed;   
+    z-index: 1000;   
+    left: 0;  
+    top: 0;  
+    width: 100%;   
+    height: 100%;   
+    overflow: auto;   
+    background-color: rgba(16, 16, 16, 0.9); 
+    color: #234383;
 
+  }  
+
+#aboutUsModal:target {  
+    display: block; 
 }  
-#close {  
-  display: none; 
-}
-#modal:target {  
-max-height: 10px;
-overflow: hidden; 
-opacity: 0; 
-padding: 0; 
+
+.modal-content {  
+    background-color: white;  
+    margin: 10% auto; 
+    padding: 20px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 90%;  
+    max-width: 500px;
+    border-radius: 10px; 
+    text-align: center; 
+    line-height:  40px;  
+    font-size: 20px;
+}  
+.modal-content h2 {  
+  margin-top: 0;  
+  margin-bottom: 10px; 
+  color: #0e2961; 
+}  
+.modal-content h3 {  
+  margin-top: 0; 
+  margin-bottom: 10px; 
+  color: #0e2961; 
 }  
 .modal:hover{
   background-color: #f8f9fa;  
@@ -155,57 +230,18 @@ padding: 0;
   padding: 20px;  
   border-radius: 5px;  
 }
-.modal .show{
-background-color: #e6f7ff;  
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);  
-  transform: scale(1.05) rotate(2deg); 
-
-}
-
-#aboutUsModal:target {  
-  display: block; 
-}  
-
-.modal-content {  
-  background-color: white;  
-  margin: 10% auto;  
-  padding: 20px;  
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  width: 90%;  
-  max-width: 500px;  
-  border-radius: 10px; 
-  text-align: center; 
-  line-height:  40px;  
-  font-size: 20px;
-  text-align: left;  
-  font-size: 18px;  
-  line-height: 1.6; 
-
-}  
-.modal-content h2 {  
-margin-top: 0; 
-margin-bottom: 10px; 
-color: #0e2961; 
-text-align: center;
-}  
-.modal-content h3 {  
-margin-top: 0;
-margin-bottom: 10px; 
-color: #0e2961; 
-text-align: center;
-}  
 
 .close {  
-  color: #aaa;  
-  float: right;  
-  font-size: 28px;  
-  font-weight: bold;  
+    color: #aaa;  
+    float: right;  
+    font-size: 28px;  
+    font-weight: bold;  
 }
 .close:hover,  
 .close:focus {  
-color: black;  
-text-decoration: none;  
-cursor: pointer;  
+  color: black;  
+  text-decoration: none;  
+  cursor: pointer;  
 }  
 @media (max-width: 668px) {  
     .modal-content {  
@@ -317,8 +353,8 @@ line-height: 2.4;
   color: #001f3f;  
   padding: 0.5rem 1rem;  
   border-radius: 15px;  
-  text-decoration: none;  
-    font-size: 20px;  
+  text-decoration: none; 
+  font-size: 20px;  
   font-weight: bold;  
   transition: background-color 0.3s, color 0.3s;
   margin-top: 1rem;  
@@ -341,9 +377,10 @@ line-height: 2.4;
   .learn-more {  
       padding: 0.5rem;  
       font-size: 16px; 
+      max-width: 90%;           
+
   }  
 }
-
 footer {  
   background: linear-gradient(to right, #1d2048, #0e2961); 
   color: #FFFFFF;  
