@@ -247,6 +247,9 @@ nav ul li a:hover::after {
       align-items: center; 
     }
   }  
+  
+  
+
 /* LASIK Article */
 .lasik2025 {
   max-width: 900px;
@@ -379,5 +382,4 @@ video {
   }  
     .lasik2025 h1{
         text-align: center;
-
   }
