@@ -632,3 +632,104 @@ width: 100%;
       height: 30px;  
   }  
 }  
+
+/* ===== FIX FOOTER MOBILE LAYOUT ONLY ===== */
+@media screen and (max-width: 768px) {
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    .footer-content,
+    .footer-links,
+    .social-media {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    /* Contact text center on mobile */
+    .cu {
+        text-align: center;
+    }
+
+    .footer-links ul {
+        padding: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .social-media a {
+        display: inline-block;
+        margin: 0 8px;
+    }
+
+    .bottom-bar {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
+
+/* ===== FINAL FOOTER MOBILE FIX (SAFE) ===== */
+@media screen and (max-width: 768px) {
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        padding: 0;
+    }
+
+    /* كل أقسام الفوتر */
+    .footer-content,
+    .footer-links,
+    .social-media {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+    /* Contact Us */
+    .cu {
+        text-align: center;
+        line-height: 32px;
+    }
+
+    .footer-content p {
+        margin: 6px 0;
+    }
+
+    /* Quick Links */
+    .footer-links ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    /* Social icons */
+    .social-media a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .social-media img {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Bottom bar */
+    .bottom-bar {
+        margin-top: 15px;
+        font-size: 14px;
+        text-align: center;
+    }
+}
