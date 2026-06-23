@@ -1042,3 +1042,34 @@ p, li, article, span {
         object-fit: cover !important;
     }
 }
+
+
+/* ==========================================================================
+   FORCE DARK FOOTER (OVERRIDING GLOBAL THEME)
+   ========================================================================== */
+
+footer, 
+.site-footer, 
+#footer {
+    background-color: #0a2240 !important; /* الكحلي الملكي الأصلي للفوتر */
+    background: #0a2240 !important;
+    color: #ffffff !important; /* إجبار النصوص لتصبح بيضاء لتظهر بوضوح */
+    border-top: 3px solid #d4af37 !important; /* الخط الذهبي */
+    padding: 50px 0 !important;
+    margin-top: 40px !important;
+}
+
+/* إصلاح النصوص داخل الفوتر لتكون بيضاء دائماً */
+footer p, 
+footer a, 
+footer h3, 
+.footer-centered-col p, 
+.footer-centered-col a {
+    color: #ffffff !important;
+}
+
+/* إصلاح أيقونات التواصل الاجتماعي لتظهر بوضوح فوق الخلفية الكحلية */
+.social-wrapper a img {
+    filter: brightness(1) invert(0) !important; /* تأكد أن الأيقونات تظهر بشكل طبيعي */
+    background: rgba(255, 255, 255, 0.1) !important;
+}
