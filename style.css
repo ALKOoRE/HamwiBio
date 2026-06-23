@@ -1,1075 +1,748 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+* {  
+  @media (max-width: 668px){
+  margin: 0;  
+  padding: 0;  
+  box-sizing: border-box; 
+} 
+}  
+body {  
+  height: 100%;
 
-:root {
-    --primary-navy: #0a192f;
-    --accent-gold: #d4af37;
-    --text-dark: #0f172a;
-    --text-slate: #475569;
-    --bg-light: #f8fafc;
-    --card-bg: #ffffff;
-    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    --radius-premium: 18px;
-}
+  font-family: Arial, sans-serif;  
+  background-color: #001f3f; 
+  height: 100%; 
+  margin: 0; 
+  justify-content: center;
+  align-items: center;  
+}  
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-}
-/* ==========================================================================
-   1. NAVBAR (تم التحديث للون الكحلي المتناغم مع اللوغو والنصوص المضيئة)
-   ========================================================================== */
+
+body {  
+  margin: 0; 
+}  
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    /* خلفية كحلية فاخرة متناغمة مع اللوغو مع شفافية زجاجية ذكية */
-    background: rgba(10, 25, 47, 0.95); 
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    padding: 15px 6%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1.5);
+  
+  display: flex;  
+  justify-content: space-between;  
+  align-items: center;  
+  background-color: #fff ;  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}  
+.navbar h1 {  
+  font-size: 42px;
+  color: #001f3f; 
+  font-weight:100;
+  font-family: fantasy;  
+  transition: color 0.3s;
+}  
+.navbar h1:hover {  
+  color:#3c6492;
+  transition: color 0.3s; 
+} 
+
+.logo {  
+  height: 60px;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+}  
+.logo a{  
+  height: 60px;
+  padding-top: 10px;
+  display: flex;  
+  align-items: center;  
+  justify-content: center; 
+  margin-top: 50px;  
+}  
+
+.logo img {  
+  height: 130px; 
+  margin-top: 10px;
+}  
+
+.nav-right {  
+  display: flex;  
+  align-items: center;  
+}  
+
+nav {  
+  display: flex; 
+}  
+
+nav ul {  
+  list-style: none;   
+  display: flex; 
+  margin: 0; 
+  padding: 0;
+}  
+.nav li{
+  margin: 0 15px;
 }
 
-/* ==========================================================================
-   تعديل حجم اللوغو وإضافة خلفية دائرية بارزة وفخمة له
-   ========================================================================== */
-.navbar .logo {
-    display: flex;
+
+nav ul li {  
+  margin-left:  35px;  
+  white-space: nowrap; 
+}  
+
+nav a {  
+  text-decoration: none; 
+  color: #ffffff; 
+}  
+.nav a{
+  text-decoration: none;   
+  color: #0a033d; 
+  font-weight: bold;  
+  position: relative;  
+  transition: color 0.3s;
+}
+
+
+nav ul li a {  
+  font-size: 19px;
+  color: #0a033d;  
+  text-decoration: none;  
+  font-weight: bold;  
+  position: relative;  
+  transition: color 0.3s;  
+}  
+
+nav ul li a::after {  
+  content: '';  
+  display: block;  
+  height: 3px;  
+  width: 100%;  
+  background: linear-gradient(to right, #007BFF, #00FF7F);  
+  position: absolute;  
+  bottom: -5px;  
+  left: 0;  
+  transform: scaleX(0);  
+  transition: transform 0.3s;  
+}  
+
+nav ul li a:hover {  
+  color: #007BFF;  
+}  
+
+nav ul li a:hover::after {  
+  transform: scaleX(1);  
+}  
+
+.modal {  
+    display: none; 
+    position: fixed;   
+    z-index: 1000;   
+    left: 0;  
+    top: 0;  
+    width: 100%;   
+    height: 100%;   
+    overflow: auto;   
+    background-color: rgba(16, 16, 16, 0.9); 
+    color: #234383;
+
+  }  
+
+#aboutUsModal:target {  
+    display: block; 
+}  
+
+.modal-content {  
+    background-color: white;  
+    margin: 10% auto; 
+    padding: 20px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 90%;  
+    max-width: 500px;
+    border-radius: 10px; 
+    text-align: center; 
+    line-height:  40px;  
+    font-size: 20px;
+}  
+.modal-content h2 {  
+  margin-top: 0;  
+  margin-bottom: 10px; 
+  color: #0e2961; 
+}  
+.modal-content h3 {  
+  margin-top: 0; 
+  margin-bottom: 10px; 
+  color: #0e2961; 
+}  
+.modal:hover{
+  background-color: #f8f9fa;  
+  transition: all 0.3s ease;  
+  padding: 20px;  
+  border-radius: 5px;  
+}
+
+.close {  
+    color: #aaa;  
+    float: right;  
+    font-size: 28px;  
+    font-weight: bold;  
+}
+.close:hover,  
+.close:focus {  
+  color: black;  
+  text-decoration: none;  
+  cursor: pointer;  
+}  
+@media (max-width: 668px) {  
+    .modal-content {  
+        margin: 50% auto; 
+        padding: 40px;
+        line-height:  40px; 
+        color: #234383;
+    } 
+    .modal-content h2 {  
+      margin-top: 0;   
+      margin-bottom: 10px; 
+      color: #0e2961; 
+  }  
+    .modal-content h3 {  
+      margin-top: 0; 
+      margin-bottom: 10px; 
+      color: #0e2961; 
+  }  
+    .close {  
+        font-size: 24px; 
+    } 
+    h2 {  
+        font-size: 1.5em; 
+    }  
+}  
+
+
+@media screen and (max-width: 668px) {  
+  .navbar {  
+    flex-direction: column;
     align-items: center;
+    margin: 20px;
+  padding:15px;
+  border-radius: 10px;
+}  
+
+.logo img {  
+  height: 80px; 
+  margin-top: -5px;
+  }  
+
+.navbar h1 {  
+    font-size: 28px; 
+    text-align: center; 
+margin-bottom: 10px;
+margin-top: 10px;
+}  
+
+    .nav-right {  
+      margin-top: 15px; 
+      display: flex;   
+      justify-content: center;
+      width: 100%; 
+  }  
+  nav ul {  
+    display: flex;  
     justify-content: center;
-    background: #ffffff; /* الخلفية البيضاء لتبرز تفاصيل اللوغو الكحلي */
-    padding: 8px; /* مسافة داخلية لجعل الخلفية تحيط باللوغو بشكل متناسق */
-    border-radius: 50%; /* جعل الخلفية دائرية تماماً ومثالية */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* ظل ناعم يعطي اللوغو عمقاً بارزاً */
-    transition: var(--transition-smooth);
-    width: 65px; /* تحديد أبعاد ثابتة متناسقة للخلفية الدائرية */
-    height: 65px;
+    padding: 0; 
+    width: auto; 
+}  
+
+  nav ul li {  
+      margin: 0 15px;  
+  }  
+  nav ul li a{
+    font-size: 13px;
+    align-items: center; 
+  }
+}  
+
+.hero {  
+  padding: 5rem 2rem;  
+  text-align: center;  
+    background-color: #001f3f; 
+  color: white;  
+}  
+
+.hero-image {  
+  max-width: 100%;  
+  height: auto;  
+  opacity: 0.8;  
+}  
+
+.content {  
+  position: relative;  
+  padding: 20px;  
+}  
+
+h1 {  
+  font-size: 2.5rem;  
+}  
+
+p {  
+  font-size: 1.2rem;  
+  margin-bottom: 2rem;
+}  
+.hero .content p{
+line-height: 2.4;
 }
 
-/* تأثير حركي مرن عند مرور الماوس فوق الدائرة */
-.navbar .logo:hover {
-    transform: scale(1.08);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3); /* توهج ذهبي خفيف عند التمرير */
-}
-
-.navbar .logo img {
-    height: 100%; /* تجعل الصورة تأخذ المقاس الكامل المناسب للدائرة */
-    width: auto;
-    object-fit: contain;
-}
-
-.navbar h1 {
-    color: #ffffff; /* تحول اسم المركز للأبيض ليتناسب مع الخلفية الكحلية */
-    font-size: 1.2rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    flex: 1;
-    text-align: center;
-    margin: 0 20px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.nav-menu ul {
-    display: flex;
-    list-style: none;
-    gap: 10px;
-}
-
-.nav-menu ul li a {
-    color: #cbd5e1; /* لون نصوص القائمة الافتراضي (رمادي فاتح مريح) */
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    padding: 10px 20px;
-    border-radius: 50px;
-    transition: var(--transition-smooth);
-}
-
-/* تأثير التمرير (Hover) والزر النشط (Active) باللون الذهبي الملكي */
-.nav-menu ul li a:hover, .nav-menu ul li a.active {
-    color: var(--accent-gold); 
-    background: rgba(255, 255, 255, 0.08);
-}
-
-/* ==========================================================================
-   2. HERO SECTION WITH LARGE DISPLAY IMAGE
-   ========================================================================== */
-.hero-section {
-    position: relative;
-    padding: 140px 20px 80px 20px;
-    background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
-    text-align: center;
-}
-
-.hero-container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.hero-container h2 {
-    font-size: 2.8rem;
-    font-weight: 800;
-    color: var(--primary-navy);
-    line-height: 1.3;
-    margin-bottom: 30px;
-}
-
-/* تنسيق جديد وعصري للصورة لتظهر عريضة وبحجمها الكامل الممتاز */
-/* ==========================================================================
-   تعديل مظهر الصورة الرئيسية لتظهر كاملة تماماً بدون أي قص على الكمبيوتر
-   ========================================================================== */
-.hero-image-wrapper {
-    width: 100%;
-    /* تم إلغاء الارتفاع الثابت القاسي لمنع القص وجعلها مرنة */
-    border-radius: var(--radius-premium);
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
-    margin-bottom: 40px;
-    border: 1px solid rgba(0,0,0,0.05);
-    background: #ffffff; /* خلفية بيضاء ناعمة في حال كانت أبعاد الصورة مختلفة */
-}
-
-.hero-image {
-    width: 100%;
-    height: auto; /* تجعل الارتفاع يتناسق تلقائياً مع العرض */
-    object-fit: contain; /* تضمن ظهور الصورة كاملة من الحافة إلى الحافة بدون قص */
-    display: block;
-}
-
-.hero-container p {
-    font-size: 1.1rem;
-    color: var(--text-slate);
-    line-height: 1.8;
-    margin-bottom: 40px;
-    text-align: justify;
-}
-
-.btn-primary {
-    display: inline-block;
-    padding: 16px 35px;
-    background: var(--primary-navy);
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 50px;
-    box-shadow: 0 10px 25px rgba(10, 25, 47, 0.15);
-    transition: var(--transition-smooth);
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(10, 25, 47, 0.25);
-    background: #142e54;
-}
-
-/* ==========================================================================
-   3. ARTICLES GRID
-   ========================================================================== */
-.articles-section {
-    max-width: 1300px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-.container1 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-.news-card {
-    background: var(--card-bg);
-    border-radius: var(--radius-premium);
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0,0,0,0.03);
-    cursor: pointer;
-    position: relative;
-    transition: var(--transition-smooth);
-    display: flex;
-    flex-direction: column;
-}
-
-.news-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(10, 25, 47, 0.08);
-    border-color: rgba(212, 175, 55, 0.2);
-}
-
-.news-card .line {
-    height: 4px;
-    width: 100%;
-    background: var(--primary-navy);
-    transition: var(--transition-smooth);
-}
-
-.news-card:hover .line {
-    background: var(--accent-gold);
-}
-
-.news-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.news-content {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.news-content h2 {
-    font-size: 1.15rem;
-    color: var(--primary-navy);
-    font-weight: 700;
+@media (max-width: 800px){
+  .hero .content p{
     line-height: 1.4;
+    }
+}
+
+.learn-more {  
+  background-color: #f4f4f4;  
+  color: #001f3f;  
+  padding: 0.5rem 1rem;  
+  border-radius: 15px;  
+  text-decoration: none; 
+  font-size: 20px;  
+  font-weight: bold;  
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 1rem;  
+  white-space: nowrap;    
+  overflow: hidden;     
+  text-overflow: ellipsis; 
+  display: flex;    
+  justify-content: center;   
+  align-items: center;      
+  height: 10vh;              
+  max-width: 400px;           
+  margin: 0 auto;           
+}  
+
+.learn-more:hover {  
+  background: linear-gradient(to right, #c5c5cd, #aba5c0); 
+  color: white;  
+}  
+@media screen and (max-width: 600px) {
+  .learn-more {  
+      padding: 0.5rem;  
+      font-size: 16px; 
+      max-width: 90%;           
+
+  }  
+}
+footer {  
+  background: linear-gradient(to right, #1d2048, #0e2961); 
+  color: #FFFFFF;  
+  padding: 1rem;  
+  text-align: center;  
+}  
+.container1 {  
+  background-color: #001f3f; 
+  display: flex; 
+  justify-content: center;
+  max-width: 1000px; 
+  width: 90%; 
+  margin: 1rem;  
+  flex-wrap: wrap;
+}  
+
+
+
+.news-card, .news-card2, .news-card3, .news-card4 , .news-card5, .news-card6, .news-card7 {
+ background-color: #bcbfc0;
+  border-radius: 0.625rem; 
+  box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+  cursor: pointer; 
+  transition: transform 0.3s, box-shadow 0.3s;   
+  position: relative; 
+  padding: 1rem; 
+  margin: 1rem; 
+
+ 
+}  
+
+.news-content, .news-content2, .news-content3, .news-content4 , .news-content5, .news-content6, .news-content7 {  
+  padding: 1rem;
+}  
+
+.news-content h3, .news-content2 h3, .news-content3 h3, .news-content4 h3 , .news-content5 h3, .news-content6 h3, .news-content7 h3{  
+  color: #1a1560; 
+  margin: 0; 
+}  
+
+.news-content h2, .news-content2 h2, .news-content3 h2, .news-content4 h2 , .news-content5 h2, .news-content6 h2, .news-content7 h2{  
+  font-size: 1.5rem; 
+  margin: 0.5rem 0;  
+}  
+
+.news-content p, .news-content2 p, .news-content3 p, .news-content4 p , .news-content5 p, .news-content6 p, .news-content7 p {  
+  color: #777; 
+  margin: 0;
+}  
+
+@media (max-width: 600px) {  
+  .container1 {  
+      flex-direction: column;  
+      align-items: center;  
+  }  
+  .news-card, .news-card2, .news-card3, .news-card4 , .news-card5, .news-card6, .news-card7 {  
+      margin: 1rem 0; 
+      flex: 1 1 auto; 
+      min-height: 220px;  
+  }  
+}  
+
+
+.news-card:hover, .news-card2:hover, .news-card3:hover, .news-card4:hover, .news-card5:hover, .news-card6:hover, .news-card7:hover{  
+  transform: translateY(-0.3125rem) scale(1.03); 
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.2); 
+}  
+.line {
+  position: absolute; 
+  left: -5px; 
+  top: 0;
+  height: 100%; 
+  width: 0.15rem; 
+  background-color: #e1914a;
+  transform: scaleY(0); 
+  transition: transform 0.3s;  
+}  
+
+.news-card:hover .line, .news-card2:hover .line, .news-card3:hover .line, .news-card4:hover .line, .news-card5:hover .line, .news-card6:hover .line, .news-card7:hover .line{  
+  transform: scaleY(1); 
+}  
+
+.news-card img, .news-card2 img, .news-card3 img, .news-card4 img , .news-card5 img, .news-card6 img, .news-card7 img  {  
+width: 100%;  
+  height: 200px;   /* أو أي ارتفاع مناسب */
+  object-fit: cover;  
+  border-radius: 0.625rem;
+}
+.news-card5 img{
+  width:100%;  
+  height: 800px;   /* أو أي ارتفاع مناسب */
+  object-fit: cover;  
+  border-radius: 0.625rem;
+}
+
+.news-card:hover .news-image, .news-card2:hover .news-image2, .news-card3:hover .news-image3, .news-card4:hover .news-image4 , .news-card5:hover .news-image5, .news-card6:hover .news-image6, .news-card7:hover .news-image7{  
+  transform: scale(1.05);  
+}  
+
+.news-content, .news-content2, .news-content3, .news-content4 , .news-content5, .news-content6, .news-content7{  
+  padding: 1rem; 
+}  
+
+.news-content h3, .news-content2 h3, .news-content3 h3, .news-content4 h3 , .news-content5 h3, .news-content6 h3, .news-content7 h3 {  
+  color: #007BFF;  
+  margin: 0; 
+}  
+
+.news-content h2, .news-content2 h2, .news-content3 h2, .news-content4 h2 , .news-content5 h2, .news-content6 h2, .news-content7 h2{  
+  font-size: 1.5rem; 
+  margin: 0.5rem 0;
+}  
+
+.news-content p, .news-content2 p, .news-content3 p, .news-content4 p , .news-content5 p, .news-content6 p, .news-content7 p {  
+  color: #777;  
+  margin: 0; 
+}
+ 
+.read-more {  
+  font-size: 1.5rem; 
+  color: #007BFF;   
+  margin-top: 0.5rem; 
+  display: inline-block; 
+  transition: color 0.3s;   
+}  
+
+.read-more:hover {  
+  color: #00eaff; 
+}  
+
+.wcontainer {  
+  max-width: 800px;  
+  margin: 0 auto;  
+  background: #0e2961;  
+  padding: 20px;  
+  border-radius: 8px;  
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+}  
+.wcontainer ul li a{
+  color:#ccc ;
+}
+
+.wcontainer h1 {  
+  text-align: center;  
+  color: #ffffff;  
+}  
+
+.links {  
+  list-style-type: none;  
+  padding: 0;  
+}  
+
+.links li {  
+  margin: 10px 0;  
+}  
+
+.links a {  
+  text-decoration: none;  
+  color: #0066cc;  
+  padding: 0px;  
+  border: 1px solid #0066cc;  
+  border-radius: 5px;  
+  display: block;  
+  height: 50px;
+  line-height: 50px;
+  transition: background-color 0.5s; 
+  text-align: center; 
+  height: auto;  
+  padding: 10px; 
+  max-width: 90%; 
+}  
+
+.links a:hover {  
+  background-color: #8ea4bb;  
+  color: #082e56;  
+}  
+
+.container {  
+  display: flex;  
+  flex-wrap: wrap;  
+  justify-content: space-around;  
+  max-width: 1200px;  
+  margin: auto;  
+  padding: 0 2rem;  
+}  
+
+ 
+
+.list{
+    list-style-type: none; 
+    padding: 0; 
+            
+} 
+.list li{
+  margin-bottom: 1rem;
+}
+
+.bottom-bar {  
+  text-align: center;  
+  margin-top: 0.5rem;  
+  font-size: 1rem;  
+  color: white;  
+}  
+
+.social-media img {  
+  width: 25px;  
+  height: auto;  
+  transition: transform 0.3s;  
+}  
+
+.social-media img:hover {  
+  transform: scale(1.2);  
+}  
+
+
+.footer {  
+  background-color: #d0e0e3; 
+  text-align: center;   
+  padding: 1rem;   
+  color: #333;  
+}  
+
+.footer-content,  
+.quick-links,  
+.social-media {  
+    display: flex;  
+    flex-direction: column; 
+    align-items: center;  
     margin-bottom: 15px;
-    min-height: 50px;
-}
+    font-size: 17px;
+}  
 
-.date-text {
-    font-size: 0.85rem;
-    color: var(--text-slate);
-    font-weight: 500;
-    margin-top: auto;
-}
+.footer-content h3,  
+.quick-links h3,  
+.social-media h3 {  
+    margin-bottom: 10px; 
+}  
 
-.read-more {
-    font-size: 1.2rem;
-    color: var(--text-slate);
-    margin-top: 10px;
-    transition: var(--transition-smooth);
-}
+.footer-content p,  
+.quick-links a {  
+    margin: 5px 0;
+} 
 
-.news-card:hover .read-more {
-    color: var(--accent-gold);
-    transform: translateX(5px);
-}
+.footer-content a,  
+.quick-links a {  
+    color: #b9afaf; 
+    text-decoration: none; 
+}  
+.footer-content a:hover,  
+.quick-links a:hover {  
+    color: #74adeb; 
+    text-decoration: none; 
+    transition: color 0.4s;  
+}  
 
-/* ==========================================================================
-   4. GLOBAL HEALTH WEBSITES (إيماءات تفاعلية وحركية فخمة عند المرور)
-   ========================================================================== */
-.links-section {
-    background: #ffffff;
-    padding: 80px 20px;
-    border-top: 1px solid #e2e8f0;
-}
+.social-media a {  
+  margin: 10px; 
+}  
 
-.wcontainer {
-    max-width: 1100px;
-    margin: 0 auto;
-}
+.social-media img {  
+  width: 40px; 
+  height: 40px; 
+}  
 
-.wcontainer h1 {
-    font-size: 2rem;
-    color: var(--primary-navy);
-    text-align: center;
-    margin-bottom: 50px;
-    font-weight: 800;
-    position: relative;
+.social-media img:hover {  
+  transform: scale(1.1); 
+  transition: transform 0.3s; 
+}  
+.cu{
+  text-align: left;
+  line-height: 35px;
 }
+@media screen and (max-width: 768px) {  
+  .footer {  
+      padding: 1rem;  
+  }  
 
-/* خط تزييني تحت العنوان الرئيسي */
-.wcontainer h1::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: var(--accent-gold);
-    margin: 12px auto 0 auto;
-    border-radius: 2px;
-}
+  .footer-content {  
+      text-align: center;  
+      margin-bottom: 20px; 
+  }  
 
-.links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 20px;
-    list-style: none;
-}
+  .footer-links {  
+      display: flex;  
+      justify-content: space-around; 
+      flex-direction: column;
+  }  
 
-.links li {
-    perspective: 1000px; /* لتهيئة تأثير ثلاثي الأبعاد خفيف */
-}
+  .quick-links,  
+  .social-media {  
+      text-align: center; 
+      margin-bottom: 15px; 
+  }  
 
-.links li a {
-    color: var(--text-slate);
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-    display: block;
-    padding: 18px 24px;
-    background: #f8fafc;
-    border-radius: 14px;
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    border-left: 4px solid rgba(10, 25, 47, 0.4); /* خط جانبي افتراضي */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* حركة انسيابية فائقة */
-}
+  .footer-content h3,  
+  .quick-links h3,  
+  .social-media h3 {  
+      font-size: 18px;  
+  }  
 
-/* الإيماءة التفاعلية عند مرور الفأرة (Hover Effect) */
-.links li a:hover {
-    color: var(--primary-navy);
-    background: #ffffff;
-    border-left-color: var(--accent-gold); /* يتحول الخط الجانبي للذهبي */
-    transform: translateY(-5px) scale(1.02); /* يرتفع الكرت ويكبر بنسبة بسيطة مريحة للعين */
-    box-shadow: 0 12px 24px rgba(10, 25, 47, 0.06); /* تظهر ظلال ناعمة تعطي عمق */
-    padding-left: 30px; /* إيماءة زحزحة مرنة للنص نحو اليمين */
-}
+  .footer-content p,  
+  .quick-links a {  
+      margin: 5px 0;  
+      font-size: 14px;  
+  }  
 
-/* ==========================================================================
-   5. CENTERED INTERACTIVE FOOTER (الفوتر في المنتصف بالكامل مع تأثيرات مضيئة تفاعلية)
-   ========================================================================== */
-footer {
-    background: #060d1a;
-    color: #94a3b8;
-    padding: 80px 0 40px 0;
-    text-align: center;
+  .social-media img {  
+      width: 30px;  
+      height: 30px;  
+  }  
+  .news-card5 img{
+  width:100%;  
+  height: 520px;   /* أو أي ارتفاع مناسب */
+  object-fit: cover;  
+  border-radius: 0.625rem;
 }
+}  
 
-.footer-centered-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 45px;
-    margin-bottom: 50px;
-}
+/* ===== FIX FOOTER MOBILE LAYOUT ONLY ===== */
+@media screen and (max-width: 768px) {
 
-.footer-centered-col {
-    width: 100%;
-    max-width: 600px;
-}
-
-footer h3 {
-    color: #ffffff;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-    font-weight: 700;
-    position: relative;
-    display: inline-block;
-}
-
-/* خط ذهبي ناعم تحت العناوين المتمركزة */
-footer h3::after {
-    content: '';
-    display: block;
-    width: 40px;
-    height: 2px;
-    background: var(--accent-gold);
-    margin: 8px auto 0 auto;
-}
-
-.cu p {
-    margin-bottom: 12px;
-    font-size: 1rem;
-}
-
-.cu a {
-    color: #cbd5e1;
-    text-decoration: none;
-    transition: var(--transition-smooth);
-    display: inline-block;
-}
-
-/* لمسة تفاعلية مضيئة للروابط في المنتصف */
-.cu a:hover {
-    color: var(--accent-gold);
-    transform: scale(1.05);
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
-}
-
-.list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-}
-
-.list li a {
-    color: #94a3b8;
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition-smooth);
-}
-
-.list li a:hover {
-    color: #ffffff;
-    text-shadow: 0 0 8px rgba(255,255,255,0.5);
-}
-.social-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-wrapper a img {
-    width: 42px;
-    height: 42px;
-    background: rgba(255,255,255,0.03);
-    padding: 10px;
-    border-radius: 50%;
-    transition: var(--transition-smooth);
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-.social-wrapper a img:hover {
-    background: #ffffff;
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
-}
-
-.bottom-bar {
-    border-top: 1px solid rgba(255,255,255,0.06);
-    padding-top: 30px;
-    font-size: 0.9rem;
-    color: #64748b;
-}
-
-/* ==========================================================================
-   6. PREMIUM ABOUT US MODAL SYSTEM (تنسيق وتقديم الفقرات بشكل طبي ممتاز)
-   ========================================================================== */
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(6, 13, 26, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: var(--transition-smooth);
-    z-index: 2000;
-}
-
-.modal:target {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.modal-content {
-    background: var(--card-bg);
-    padding: 45px;
-    border-radius: var(--radius-premium);
-    width: 90%;
-    max-width: 550px;
-    position: relative;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
-    transform: scale(0.95);
-    transition: var(--transition-smooth);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.modal:target .modal-content {
-    transform: scale(1);
-}
-
-.modal-content .close {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 2rem;
-    text-decoration: none;
-    color: var(--text-slate);
-    transition: var(--transition-smooth);
-}
-
-.modal-content .close:hover {
-    color: #ef4444;
-}
-
-.modal-content h2 {
-    font-size: 1.6rem;
-    color: var(--primary-navy);
-    font-weight: 800;
-}
-
-.modal-divider {
-    width: 50px;
-    height: 3px;
-    background: var(--accent-gold);
-    margin: 15px 0 25px 0;
-    border-radius: 2px;
-}
-
-.doctor-badge {
-    display: inline-block;
-    background: rgba(212, 175, 55, 0.1);
-    color: #b3922e;
-    padding: 5px 14px;
-    border-radius: 50px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.modal-content h3 {
-    color: var(--primary-navy);
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-}
-
-.title-sub {
-    color: var(--text-slate);
-    font-size: 1.05rem;
-    font-weight: 500;
-}
-
-/* هيكلية جديدة لتقديم فقرات السيرة الذاتية بشكل مرن ومنظم */
-.bio-features {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.feature-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    background: #f8fafc;
-    padding: 14px 18px;
-    border-radius: 12px;
-    border-left: 3px solid var(--primary-navy);
-    transition: var(--transition-smooth);
-}
-
-.feature-item:hover {
-    background: #ffffff;
-    border-left-color: var(--accent-gold);
-    transform: translateX(5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-}
-
-.f-icon {
-    font-size: 1.2rem;
-    margin-top: 2px;
-}
-
-.feature-item p {
-    color: var(--text-dark);
-    font-size: 0.95rem;
-    font-weight: 600;
-    line-height: 1.5;
-}
-
-/* ==========================================================================
-   7. RESPONSIVE
-   ========================================================================== */
-@media (max-width: 992px) {
-    .navbar h1 { font-size: 1rem; }
-    .hero-container h2 { font-size: 2.2rem; }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        position: static;
+    footer .container {
         flex-direction: column;
-        padding: 15px;
-        gap: 10px;
+        align-items: center;
+        padding: 0;
     }
-    .navbar h1 { margin: 5px 0; font-size: 0.95rem; }
-    .hero-section { padding-top: 40px; }
-    .hero-container h2 { font-size: 1.8rem; }
-    .list { flex-direction: column; gap: 10px; align-items: center; }
-}
 
+    .footer-content,
+    .footer-links,
+    .social-media {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 25px;
+    }
 
-/* ==========================================================================
-   HAMWIBIO PREMIUM BEAUTY & INTERACTION TOUCHES (ADDED JUNE 2026)
-   ========================================================================== */
+    /* Contact text center on mobile */
+    .cu {
+        text-align: center;
+    }
 
-/* 1. تنعيم حركة التنقل لجميع العناصر التفاعلية في الموقع */
-.nav-menu ul li a, 
-.cu a, 
-.list li a,
-.social-wrapper a,
-.social-wrapper a img,
-.close {
-    transition: all 0.3s ease-in-out !important;
-    display: inline-block; /* لضمان عمل تأثير الارتفاع translateY بشكل صحيح */
-}
+    .footer-links ul {
+        padding: 0;
+    }
 
-/* تأثير تفاعلي راقٍ عند تمرير الماوس فوق أزرار القائمة العلوية */
-.nav-menu ul li a:hover {
-    color: var(--accent-gold) !important;
-    transform: translateY(-2px); /* يرتفع الزر للأعلى برفق بمقدار 2 بكسل */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
 
-/* تأثير عند تمرير الماوس فوق الروابط داخل الفوتر ووسائل التواصل */
-.cu a:hover, .list li a:hover {
-    color: var(--accent-gold) !important;
-    padding-left: 5px; /* يزحف النص قليلاً لليمين لإعطاء شعور بالتفاعل */
-}
+    .social-media a {
+        display: inline-block;
+        margin: 0 8px;
+    }
 
-.social-wrapper a:hover {
-    transform: scale(1.15) rotate(3deg); /* تكبير خفيف لأيقونات السوشيال ميديا مع تدوير بسيط */
-}
-
-
-/* 2. تحسين مظهر واحترافية الصور والفيديوهات عند التمرير */
-.article-images-grid img, 
-.article-video-wrapper video {
-    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.5s ease !important;
-}
-
-/* تأثير البعد الثالث الفاخر عند تمرير الماوس فوق الصورة */
-.article-images-grid img:hover, 
-.article-video-wrapper video:hover {
-    transform: scale(1.025); /* تكبير هادئ جداً بنسبة 2.5% فقط لعدم إزعاج العين */
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important; /* تعميق الظل ليمنحها عمقاً واقعياً */
-}
-
-
-/* 3. تأثير المجلات العلمية العريقة (جعل أول حرف من المقال كبيراً ومميزاً) */
-.article-body > p:first-of-type::first-letter {
-    font-size: 3.5rem;
-    font-weight: 800;
-    float: left;
-    color: var(--primary-navy);
-    line-height: 0.85;
-    margin-right: 12px;
-    margin-top: 6px;
-    font-family: 'Georgia', serif; /* تغيير خط الحرف الأول ليعطي طابعاً أكاديمياً كلاسيكياً */
-}
-
-
-/* 4. تخصيص شريط التمرير الجانبي (Scrollbar) بألوان الهوية البصرية للمركز */
-/* يعمل على متصفحات Chrome, Edge, Safari, Opera */
-::-webkit-scrollbar {
-    width: 10px; /* عرض شريط التمرير */
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f1f1; /* لون خلفية المجرى */
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--primary-navy); /* اللون الكحلي الأساسي للشريط */
-    border-radius: 10px; /* جعل حواف الشريط دائرية وناعمة */
-    border: 2px solid #f1f1f1; /* مسافة أمان حول الشريط */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-gold); /* يتحول للون الذهبي عند سحبه بالماوس */
-}
-
-/* تخصيص شريط التمرير لمتصفح Firefox */
-* {
-    scrollbar-width: thin;
-    scrollbar-color: var(--primary-navy) #f1f1f1;
-}
-
-
-
-
-
-/* ==========================================================================
-   PERFECTLY CENTERED & HARMONIZED FOOTER STYLING 
-   ========================================================================== */
-
-footer {
-    background: #0a2240 !important; /* نفس درجة الكحلي الفاخرة المعتمدة في الهيدر */
-    color: #e2e8f0 !important;
-    padding: 50px 0 20px 0 !important;
-    border-top: 3px solid #d4af37 !important; /* خط ذهبي ممتد بعرض الصفحة */
-    font-family: 'Poppins', 'Segoe UI', sans-serif !important;
-}
-
-/* إعادة ضبط الحاوية الموزعة للأعمدة الثلاثة */
-footer .container {
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 0 40px !important;
-}
-
-.footer-centered-content {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: flex-start !important;
-    flex-wrap: wrap !important;
-    gap: 40px !important;
-}
-
-/* توزيع متناسق للأعمدة مع إجبار محتوى كل عمود على التوسط الكامل */
-.footer-centered-col {
-    flex: 1 !important;
-    min-width: 250px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important; /* توسيط المحتوى أفقياً داخل العمود */
-    text-align: center !important; /* توسيط النصوص بالكامل لمنع انحيازها لليسار */
-}
-
-/* ضبط العناوين بالكامل وتوسيط الخط الذهبي أسفلها */
-.footer-centered-col h3 {
-    color: #ffffff !important;
-    font-size: 1.15rem !important;
-    font-weight: 700 !important;
-    margin-top: 0 !important;
-    margin-bottom: 25px !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.8px !important;
-    border-bottom: 2px solid rgba(212, 175, 55, 0.5) !important;
-    padding-bottom: 6px !important;
-    display: inline-block !important;
-    width: auto !important;
-}
-
-/* إصلاح قائمة الاتصال: زيادة المسافات وتوسيط النصوص */
-.cu {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important; /* توسيط نصوص الاتصال تحت العنوان مباشرة */
-    width: 100% !important;
-}
-
-.cu p {
-    margin: 0 0 12px 0 !important;
-    font-size: 0.95rem !important;
-    line-height: 1.6 !important;
-    color: #cbd5e1 !important;
-    width: 100% !important;
-}
-
-.cu a {
-    color: #ffffff !important;
-    text-decoration: none !important;
-    transition: color 0.3s ease !important;
-}
-
-.cu a:hover {
-    color: #d4af37 !important;
-}
-
-/* إصلاح روابط Quick Links: جعلها عمودية متراصة ومتوسطة تماماً أسفل عنوانها */
-.list {
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    display: flex !important;
-    flex-direction: column !important; /* ترتيب عمودي تحت بعضها */
-    align-items: center !important; /* التوسيط في المنتصف تماماً بدلاً من اليسار */
-    gap: 14px !important; /* مسافة مريحة وممتازة بين الروابط */
-    width: 100% !important;
-}
-
-.list li {
-    margin: 0 !important;
-    width: 100% !important;
-}
-
-.list li a {
-    color: #cbd5e1 !important;
-    text-decoration: none !important;
-    font-size: 0.95rem !important;
-    font-weight: 500 !important;
-    transition: all 0.3s ease !important;
-    display: inline-block !important;
-}
-
-.list li a:hover {
-    color: #d4af37 !important;
-    transform: scale(1.05) !important; /* تكبير ناعم بدلاً من الإزاحة الجانبية لضمان ثبات التوسيط */
-}
-
-/* إصلاح كامل وتوسيط لأيقونات السوشيال ميديا (Follow Us) وتكبيرها */
-.social-wrapper {
-    display: flex !important;
-    gap: 20px !important;
-    align-items: center !important;
-    justify-content: center !important; /* توسيط الأيقونات تماماً أسفل العنوان */
-    margin-top: 5px !important;
-    width: 100% !important;
-}
-
-.social-wrapper a {
-    display: inline-flex !important;
-}
-
-.social-wrapper a img {
-    width: 44px !important; /* حجم مثالي واحترافي */
-    height: 44px !important;
-    background: rgba(255, 255, 255, 0.08) !important; /* خلفية ناعمة دائرية */
-    padding: 10px !important;
-    border-radius: 50% !important;
-    border: 1px solid rgba(255, 255, 255, 0.15) !important;
-    transition: all 0.3s ease !important;
-}
-.social-wrapper a:hover img {
-    background: #d4af37 !important; /* التأثير الذهبي اللامع */
-    transform: translateY(-4px) !important;
-    box-shadow: 0 6px 15px rgba(212, 175, 55, 0.35) !important;
-}
-
-/* شريط حقوق النشر السفلي */
-.bottom-bar {
-    width: 100% !important;
-    margin-top: 40px !important;
-    padding-top: 20px !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
-    text-align: center !important;
-}
-
-.bottom-bar p {
-    font-size: 0.85rem !important;
-    color: #94a3b8 !important;
-    margin: 0 !important;
-}
-
-/* التجاوب الذكي مع الشاشات المتعددة */
-@media (max-width: 768px) {
-    .footer-centered-content {
-        flex-direction: column !important;
-        align-items: center !important;
+    .bottom-bar {
+        margin-top: 10px;
+        font-size: 14px;
     }
 }
 
+/* ===== FINAL FOOTER MOBILE FIX (SAFE) ===== */
+@media screen and (max-width: 768px) {
 
-
-
-/* ==========================================================================
-   GLOBAL ROYAL TEXTURE THEME (FORCED SUPREMACY)
-   ========================================================================== */
-
-/* استهداف كل الحاويات المحتملة في الموقع لفرض لون الشامبين الملكي الناعم */
-html, 
-body, 
-main, 
-.main-content, 
-div[style*="background"] {
-    background-color: #fcf8f2 !important; /* لون الشامبين الفاخر المريح جداً للعين */
-    background: #fcf8f2 !important;
-}
-
-/* إجبار كروت الأبحاث والمقالات على الطفو باللون الأبيض الرخامي الناصع */
-.article-container, 
-.article, 
-.research-pillar, 
-.feature-card, 
-.info-card, 
-.card, 
-.about-box {
-    background-color: #ffffff !important;
-    background: #ffffff !important;
-    border-radius: 16px !important;
-    box-shadow: 0 12px 35px rgba(139, 115, 85, 0.05) !important; /* ظل ناعم متناسق مع الخلفية */
-    border: 1px solid rgba(212, 175, 55, 0.1) !important; /* إطار ذهبي نحيف يعزز الفخامة */
-}
-
-/* جعل لون الخطوط كحلي/بني داكن مخملي بدلاً من الأسود الحاد لراحة العين */
-p, li, article, span {
-    color: #1e293b !important;
-}
-
-/* ==========================================================================
-   CRITICAL MOBILE RESPONSIVENESS & IMAGE FIX (CORRECTED BY SCREENSHOT 14-34-13)
-   ========================================================================== */
-
-@media (max-width: 768px) {
-    /* 1. تحرير الحاوية الرئيسية وإجبارها على أخذ كامل عرض شاشة الموبايل */
-    html, body {
-        width: 100% !important;
-        overflow-x: hidden !important; /* منع أي تفكك أو اهتزاز جانبي */
-        padding: 0 !important;
-        margin: 0 !important;
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        padding: 0;
     }
 
-    main, .main-content, .container, .article-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 15px !important; /* مسافة أمان مريحة جداً من الأطراف */
-        margin: 0 auto !important;
-        box-sizing: border-box !important;
+    /* كل أقسام الفوتر */
+    .footer-content,
+    .footer-links,
+    .social-media {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        margin: 0;
     }
 
-    /* 2. إلغاء أي تقسيم للأعمدة وإجبار العناصر على النزول تحت بعضها بكامل العرض */
-    .article-grid, 
-    .articles-list, 
-    .main-layout, 
-    .footer-centered-content,
-    div[style*="display: flex"], 
-    div[style*="display: grid"] {
-        display: block !important; /* تحويل الأعمدة المتجاورة إلى نظام عمودي */
-        width: 100% !important;
+    /* Contact Us */
+    .cu {
+        text-align: center;
+        line-height: 32px;
     }
 
-    /* 3. تنسيق متوازن للصور والفيديوهات لتملأ الشاشة بشكل راقٍ */
-    img, 
-    video, 
-    .article-images-grid img, 
-    .article-video-wrapper video {
-        width: 100% !important; /* تمدد الصورة لتأخذ العرض الكامل المتاح لها */
-        max-width: 100% !important;
-        height: auto !important; /* الحفاظ على أبعاد الصورة الأصلية دون تشويه */
-        display: block !important;
-        margin: 15px auto !important; /* توسيط دقيق مع مسافة مريحة فوق وتحت الصورة */
-        border-radius: 10px !important; /* حواف دائرية ناعمة تتناسب مع التحديث الجمالي */
+    .footer-content p {
+        margin: 6px 0;
     }
 
-    /* 4. إصلاح النصوص المزدحمة المذكورة في لقطة الشاشة */
-    p, article, .article-body {
-        font-size: 1rem !important; /* حجم خط مثالي ومريح للقراءة على الهاتف */
-        line-height: 1.6 !important; /* مسافات مريحة بين الأسطر */
-        text-align: justify !important; /* محاذاة النص بشكل مستقيم واحترافي */
-        width: 100% !important;
-        margin-bottom: 15px !important;
+    /* Quick Links */
+    .footer-links ul {
+        padding: 0;
+        margin: 0;
     }
 
-    /* 5. إصلاح الهيدر والقائمة العلوية على الموبايل لمنع انضغاطها */
-    .navbar {
-        padding: 10px 15px !important;
-        flex-direction: row !important;
-        justify-content: space-between !important;
-        width: 100% !important;
+    .footer-links ul li {
+        margin-bottom: 10px;
     }
 
-    .nav-menu ul {
-        gap: 12px !important; /* تقريب الأزرار قليلاً لتناسب شاشة الهاتف */
+    /* Social icons */
+    .social-media a {
+        display: inline-block;
+        margin: 0 10px;
     }
 
-    .nav-menu ul li a {
-        font-size: 0.85rem !important; /* حجم متناسق مع شاشات الجوال */
+    .social-media img {
+        width: 32px;
+        height: 32px;
     }
-}
 
-
-
-/* ==========================================================================
-   FINAL COMPREHENSIVE MOBILE OPTIMIZATION & HEADER REPAIR
-   ========================================================================== */
-
-/* إصلاح عام ومستقر لشاشات الموبايل */
-@media (max-width: 768px) {
+    /* Bottom bar */
+    .bottom-bar {
+        margin-top: 15px;
+        font-size: 14px;
+        text-align: center;
+    }
     
-    /* 1. إصلاح الهيدر بالكامل ومنع تداخل النصوص */
-    .navbar {
-        display: flex !important;
-        flex-direction: row !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        padding: 10px 12px !important;
-        height: auto !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    /* منع تشوه أو انضغاط اللوجو (الشعار البيضاوي في الصورة) */
-    .logo img {
-        height: 40px !important; /* حجم متناسق جداً للموبايل */
-        width: auto !important; /* إجبار المتصفح على الحفاظ على أبعاد الشعار الأصلية */
-        max-width: 80px !important;
-    }
-
-    /* إخفاء العنوان النصي الكبير في الهيدر على الموبايل لترك مساحة كافية للأزرار */
-    .navbar h1 {
-        display: none !important;
-    }
-
-    /* ترتيب أزرار التنقل بشكل متباعد وأنيق على الموبايل */
-    .nav-menu {
-        display: block !important;
-        width: auto !important;
-    }
-
-    .nav-menu ul {
-        display: flex !important;
-        flex-direction: row !important;
-        gap: 12px !important; /* مسافة مريحة تمنع الالتصاق والتداخل */
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    .nav-menu ul li a {
-        font-size: 0.85rem !important; /* حجم خط ناعم ومناسب للموبايل */
-        padding: 5px 2px !important;
-        white-space: nowrap !important; /* منع نزول الكلمة لسطر جديد */
-    }
-
-    /* 2. إظهار المستطيلات والتأثيرات وكروت المقالات الضائعة بالكامل */
-    main, .container, .article-container {
-        padding: 20px 15px !important;
-        background-color: #fcf8f2 !important; /* تفعيل خلفية الشامبين المريحة */
-    }
-
-    /* فرض مظهر المستطيل والكارت الفاخر على المقالات وروابط الأقسام */
-    .article, 
-    .article-container, 
-    .research-pillar, 
-    .feature-card,
-    div[class*="latest"], 
-    a[class*="latest"] {
-        display: block !important;
-        width: 100% !important;
-        background-color: #ffffff !important; /* إجبار الخلفية البيضاء للكارت لتظهر التأثيرات */
-        background: #ffffff !important;
-        border-radius: 12px !important;
-        padding: 20px !important;
-        margin-bottom: 25px !important;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05) !important; /* الظل ثلاثي الأبعاد */
-        border: 1px solid rgba(212, 175, 55, 0.15) !important; /* إطار ذهبي خفيف */
-        box-sizing: border-box !important;
-    }
-
-    /* تحسين مظهر الصور والفيديوهات داخل المقالات لتملأ المستطيل الجديد */
-    img, video {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: auto !important;
-        border-radius: 8px !important;
-        object-fit: cover !important;
-    }
-}
-
-
-/* ==========================================================================
-   FORCE DARK FOOTER (OVERRIDING GLOBAL THEME)
-   ========================================================================== */
-
-footer, 
-.site-footer, 
-#footer {
-    background-color: #0a2240 !important; /* الكحلي الملكي الأصلي للفوتر */
-    background: #0a2240 !important;
-    color: #ffffff !important; /* إجبار النصوص لتصبح بيضاء لتظهر بوضوح */
-    border-top: 3px solid #d4af37 !important; /* الخط الذهبي */
-    padding: 50px 0 !important;
-    margin-top: 40px !important;
-}
-
-/* إصلاح النصوص داخل الفوتر لتكون بيضاء دائماً */
-footer p, 
-footer a, 
-footer h3, 
-.footer-centered-col p, 
-.footer-centered-col a {
-    color: #ffffff !important;
-}
-
-/* إصلاح أيقونات التواصل الاجتماعي لتظهر بوضوح فوق الخلفية الكحلية */
-.social-wrapper a img {
-    filter: brightness(1) invert(0) !important; /* تأكد أن الأيقونات تظهر بشكل طبيعي */
-    background: rgba(255, 255, 255, 0.1) !important;
 }
