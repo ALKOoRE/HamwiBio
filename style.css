@@ -954,3 +954,91 @@ p, li, article, span {
         font-size: 0.85rem !important; /* حجم متناسق مع شاشات الجوال */
     }
 }
+
+
+
+/* ==========================================================================
+   FINAL COMPREHENSIVE MOBILE OPTIMIZATION & HEADER REPAIR
+   ========================================================================== */
+
+/* إصلاح عام ومستقر لشاشات الموبايل */
+@media (max-width: 768px) {
+    
+    /* 1. إصلاح الهيدر بالكامل ومنع تداخل النصوص */
+    .navbar {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px 12px !important;
+        height: auto !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* منع تشوه أو انضغاط اللوجو (الشعار البيضاوي في الصورة) */
+    .logo img {
+        height: 40px !important; /* حجم متناسق جداً للموبايل */
+        width: auto !important; /* إجبار المتصفح على الحفاظ على أبعاد الشعار الأصلية */
+        max-width: 80px !important;
+    }
+
+    /* إخفاء العنوان النصي الكبير في الهيدر على الموبايل لترك مساحة كافية للأزرار */
+    .navbar h1 {
+        display: none !important;
+    }
+
+    /* ترتيب أزرار التنقل بشكل متباعد وأنيق على الموبايل */
+    .nav-menu {
+        display: block !important;
+        width: auto !important;
+    }
+
+    .nav-menu ul {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 12px !important; /* مسافة مريحة تمنع الالتصاق والتداخل */
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .nav-menu ul li a {
+        font-size: 0.85rem !important; /* حجم خط ناعم ومناسب للموبايل */
+        padding: 5px 2px !important;
+        white-space: nowrap !important; /* منع نزول الكلمة لسطر جديد */
+    }
+
+    /* 2. إظهار المستطيلات والتأثيرات وكروت المقالات الضائعة بالكامل */
+    main, .container, .article-container {
+        padding: 20px 15px !important;
+        background-color: #fcf8f2 !important; /* تفعيل خلفية الشامبين المريحة */
+    }
+
+    /* فرض مظهر المستطيل والكارت الفاخر على المقالات وروابط الأقسام */
+    .article, 
+    .article-container, 
+    .research-pillar, 
+    .feature-card,
+    div[class*="latest"], 
+    a[class*="latest"] {
+        display: block !important;
+        width: 100% !important;
+        background-color: #ffffff !important; /* إجبار الخلفية البيضاء للكارت لتظهر التأثيرات */
+        background: #ffffff !important;
+        border-radius: 12px !important;
+        padding: 20px !important;
+        margin-bottom: 25px !important;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05) !important; /* الظل ثلاثي الأبعاد */
+        border: 1px solid rgba(212, 175, 55, 0.15) !important; /* إطار ذهبي خفيف */
+        box-sizing: border-box !important;
+    }
+
+    /* تحسين مظهر الصور والفيديوهات داخل المقالات لتملأ المستطيل الجديد */
+    img, video {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        border-radius: 8px !important;
+        object-fit: cover !important;
+    }
+}
