@@ -883,3 +883,74 @@ div[style*="background"] {
 p, li, article, span {
     color: #1e293b !important;
 }
+
+/* ==========================================================================
+   CRITICAL MOBILE RESPONSIVENESS & IMAGE FIX (CORRECTED BY SCREENSHOT 14-34-13)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 1. تحرير الحاوية الرئيسية وإجبارها على أخذ كامل عرض شاشة الموبايل */
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important; /* منع أي تفكك أو اهتزاز جانبي */
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    main, .main-content, .container, .article-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px !important; /* مسافة أمان مريحة جداً من الأطراف */
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. إلغاء أي تقسيم للأعمدة وإجبار العناصر على النزول تحت بعضها بكامل العرض */
+    .article-grid, 
+    .articles-list, 
+    .main-layout, 
+    .footer-centered-content,
+    div[style*="display: flex"], 
+    div[style*="display: grid"] {
+        display: block !important; /* تحويل الأعمدة المتجاورة إلى نظام عمودي */
+        width: 100% !important;
+    }
+
+    /* 3. تنسيق متوازن للصور والفيديوهات لتملأ الشاشة بشكل راقٍ */
+    img, 
+    video, 
+    .article-images-grid img, 
+    .article-video-wrapper video {
+        width: 100% !important; /* تمدد الصورة لتأخذ العرض الكامل المتاح لها */
+        max-width: 100% !important;
+        height: auto !important; /* الحفاظ على أبعاد الصورة الأصلية دون تشويه */
+        display: block !important;
+        margin: 15px auto !important; /* توسيط دقيق مع مسافة مريحة فوق وتحت الصورة */
+        border-radius: 10px !important; /* حواف دائرية ناعمة تتناسب مع التحديث الجمالي */
+    }
+
+    /* 4. إصلاح النصوص المزدحمة المذكورة في لقطة الشاشة */
+    p, article, .article-body {
+        font-size: 1rem !important; /* حجم خط مثالي ومريح للقراءة على الهاتف */
+        line-height: 1.6 !important; /* مسافات مريحة بين الأسطر */
+        text-align: justify !important; /* محاذاة النص بشكل مستقيم واحترافي */
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* 5. إصلاح الهيدر والقائمة العلوية على الموبايل لمنع انضغاطها */
+    .navbar {
+        padding: 10px 15px !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+    }
+
+    .nav-menu ul {
+        gap: 12px !important; /* تقريب الأزرار قليلاً لتناسب شاشة الهاتف */
+    }
+
+    .nav-menu ul li a {
+        font-size: 0.85rem !important; /* حجم متناسق مع شاشات الجوال */
+    }
+}
