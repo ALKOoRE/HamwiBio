@@ -3,108 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AL Hamwi BioMedical Research centre</title>
+    <title>Flexible Artificial Retina 2026 | AL Hamwi BioMedical Research Centre</title>
     <link rel="icon" href="icon/HamwiBioTB (2).png">
-    <link rel="stylesheet" href="article7.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="article.css">
+    <meta name="description" content="A flexible, wire-free artificial retina implant developed to restore vision for retinal patients.">
 </head>
+<body>
+    <header class="site-header">
+        <input type="checkbox" id="navToggle" class="nav-toggle-state">
+        <div class="site-header-inner">
+            <a href="index.html" class="brand">
+                <img src="icon/HamwiBio.png" alt="HamwiBio Logo" class="brand-logo">
+                <span class="brand-text">
+                    <span class="brand-title">AL Hamwi</span>
+                    <span class="brand-subtitle">BioMedical Research Centre</span>
+                </span>
+            </a>
 
-<body>  
-    <header class="navbar" >  
-        <div class="logo">  
-            <a href="icon/HamwiBio.png">  
-                <img src="icon/HamwiBio.png" alt="HamwiBio Logo" >           
-            </a>  
-        </div>  
-        
-      
-        <h1>AL Hamwi BioMedical Research Centre</h1>   
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Articles.html">Articles</a></li>
+                    <li><a href="#aboutUsModal">About Us</a></li>
+                </ul>
+            </nav>
 
-        <nav class="nav-menu">  
-            <ul>  
-                <li><a href="index.html">Home</a></li>  
-                <li><a href="Articles.html">Articles</a></li>  
-                <li><a href="#aboutUsModal">About Us</a></li>  
-            </ul>  
-        </nav>  
+            <label for="navToggle" class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
 
-      <div id="aboutUsModal" class="modal">  
-        <div class="modal-content">  
-            <a href="#" class="close">&times;</a>  
-            <h2>About Us</h2>  
-            <p><h3> Dr Morhaf Al Hamwi /
-                Ophthalmologist </h3> <br>
-                - Establisher, Al Hamwi BioMedical Research Centre.  <br>
-                -  Member of the Royal College of Ophthalmologists/ UK. <br>
-               -  Corneal Transplant & Retinopathy Researcher. <br>
-              -   Chairman, Al Madad Medical Charity.</p>  
-        </div>  
-    </div>  
-    <a id="close"></a> 
-    </header>  
-    
-    <h1>Flexible Artificial Retina 2026</h1>  
-            <p class="date"> May 31 2026 </p>  
-    <div class="images">
-               <img src="img/Flexible Artificial Retina 2026.jpg" alt="وصف الصورة 1" class="responsive-image" />   
+        <label for="navToggle" class="nav-scrim"></label>
+
+        <nav class="mobile-nav">
+            <label for="navToggle" class="mobile-nav-close" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            </label>
+            <div class="mobile-nav-brand">
+                <img src="icon/HamwiBio.png" alt="HamwiBio Logo">
+                <span>AL Hamwi BioMedical</span>
             </div>
-            <article class="article">  
-<hr><p> A "Flexible Artificial Retina" has been developed: "BioElectrical Retina", which responds to light stimulation. Here, we observe a tangible change in the retinal function on Electro Retino Graphy (ERG). <br>
-And the SubRetinal Photo-Voltaic Microchips
-receive Near-InfraRed (NIR) light to treat the central vision loss such as in Age-related Macular Degeneration (AMD) case. <br> These implants convert light into electrical signals to stimulate the remaining nerve cells, enabling patients to regain high-resolution functional central vision.
-<br>
-<br>
-<br>
+            <ul>
+                <li style="--i:1">
+                    <a href="index.html">
+                        <span class="mobile-nav-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11.5 12 4l8 7.5M6 10v9h12v-9" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="mobile-nav-label">Home</span>
+                        <svg class="mobile-nav-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </li>
+                <li style="--i:2">
+                    <a href="Articles.html">
+                        <span class="mobile-nav-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 4h10l4 4v12H5V4z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M9 12h6M9 16h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                        </span>
+                        <span class="mobile-nav-label">Articles</span>
+                        <svg class="mobile-nav-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </li>
+                <li style="--i:3">
+                    <a href="#aboutUsModal">
+                        <span class="mobile-nav-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M5 20c1.2-3.8 4-5.6 7-5.6s5.8 1.8 7 5.6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+                        </span>
+                        <span class="mobile-nav-label">About Us</span>
+                        <svg class="mobile-nav-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </li>
+            </ul>
+            <div class="mobile-nav-footer">
+                <a href="mailto:Info@HamwiBio.com">Info@HamwiBio.com</a>
+            </div>
+        </nav>
+    </header>
 
-Good news for retinal patients.
-Regardless of the extent of retinal damage... <br>
-"Flexible Artificial Retina Implantation" - a new scientific revolution... <br>
-British specialists have developed an advanced technology for implanting a retinal replacement for the damaged retina. This new retina guarantees restored vision with high acuity and an expanded field of vision, all compared to the surgical methods used until now.
-<ul>
-<li> Vision loss is most often due to the death of light-sensitive cells or sensory receptors, namely the rods and cones in the retina. The best and most modern method for treating this condition is Artificial Retina Implantation.</li> <br>
-<li> The new retina is distinguished by its simple implantation; it is wire-free, made of highly flexible materials with PhotoElectric Pixels, and allows the user to expand their field of vision by an additional 60 degrees. <br> This technology is powered by Solar Energy, which stores the necessary energy for the retina's operation automatically and continuously.</li> <br>
-</ul>
-<p> The British company "Optical Express", which is developing this project, is committed to keeping the cost affordable and accessible to any patient with minimal financial burden, and aims to make it available in most of the world countries within a few months. </p>   </article>  
+    <main>
+    <section class="article-banner">
+        <div class="article-banner-inner">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="breadcrumb-sep">/</span>
+                <a href="Articles.html">Articles</a>
+                <span class="breadcrumb-sep">/</span>
+                <span class="breadcrumb-current" aria-current="page">Flexible Artificial Retina 2026</span>
+            </nav>
+            <span class="hero-eyebrow">Retinal Technology</span>
+            <h1 class="article-title">Flexible Artificial Retina 2026</h1>
+            <span class="article-date-pill">🗓 31 May 2026</span>
+        </div>
+    </section>
+    </main>
 
+    <section class="article-shell">
+        <article class="article-card">
+            <div class="article-cover">
+                <img src="img/Flexible Artificial Retina 2026.jpg" alt="Flexible Artificial Retina 2026">
+            </div>
+            <p>A "Flexible Artificial Retina" has been developed — the "BioElectrical Retina" — which responds to light stimulation. Here, we observe a tangible change in retinal function on Electroretinography (ERG).</p>
 
-        <footer>  
-        <div class="container">  
-          <div class="footer-content">  
-                <h3>Contact Us</h3>  
-            <div class="cu">   <p>Email: <a href="mailto:Info@HamwiBio.com">Info@HamwiBio.com</a></p> 
-               <p>Phone: <a href="tel:+447984296584">+44 7984 296584</a></p>
-                <p>Phone: <a href="tel:+963939149113">+963 939 149 113</a></p>  
-                  <p>WhatsApp: <a href="https://wa.me/447984296584">+44 7984 296584</a></p>
-                <p>WhatsApp: <a href="https://wa.me/963939149113">+963 939 149 113</a></p>
-                <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61574457707075" target="_blank">Dr-Morhaf Al Hamwi</a></p>
-           </div> 
-        </div>    
+            <p>The SubRetinal Photo-Voltaic Microchips receive near-infrared (NIR) light to treat central vision loss, such as in Age-related Macular Degeneration (AMD). These implants convert light into electrical signals to stimulate the remaining nerve cells, enabling patients to regain high-resolution functional central vision.</p>
 
-        <hr style="border: 1px solid #ccc; margin: 20px 0;"/> <!-- خط فاصل -->  
+            <p>Good news for retinal patients — regardless of the extent of retinal damage. "Flexible Artificial Retina Implantation" is a new scientific revolution: British specialists have developed an advanced technology for implanting a retinal replacement for the damaged retina. This new retina guarantees restored vision with high acuity and an expanded field of vision, compared to the surgical methods used until now.</p>
 
-              <div class="footer-content">  
-                <h3>Quick Links</h3>  
-                <ul class="list">  
-                    <li><a href="index.html">Home</a></li>  
-                    <li><a href="#aboutUsModal">About</a></li>  
-                </ul>  
-             </div>  
-          
-             <hr style="border: 1px solid #ccc; margin: 20px 0;"/> <!-- خط فاصل -->  
+            <ul>
+                <li>Vision loss is most often due to the death of light-sensitive cells — namely the rods and cones — in the retina. The best and most modern method for treating this condition is Artificial Retina Implantation.</li>
+                <li>The new retina is distinguished by its simple implantation; it is wire-free, made of highly flexible materials with photoelectric pixels, and allows the user to expand their field of vision by an additional 60 degrees. This technology is powered by solar energy, which stores the necessary energy for the retina's operation automatically and continuously.</li>
+            </ul>
 
-            <div class="footer-content social-media">  
-                <h3>Follow Us</h3>  
-                <a href="https://www.facebook.com/share/1A8uS6Db4M/" target="_blank">  
-                    <img src="icon/facebook_logo_icon_147291.png" alt="Facebook" />  
-                </a>  
-                <a href="https://www.blogger.com/u/2/blog/posts/1502099121325751896?pli=1" target="_blank">  
-                    <img src="icon/blogger-icon.png" alt="Blogger" />  
-                </a>  
-            </div>  
-        </div> 
+            <p class="article-highlight">The British company "Optical Express", which is developing this project, is committed to keeping the cost affordable and accessible to any patient with minimal financial burden, and aims to make it available in most countries of the world within a few months.</p>
+            <a href="Articles.html" class="article-back"><span>←</span> Back to Articles</a>
+        </article>
+    </section>
 
-        <div class="bottom-bar">  
-            <p>&copy; 2026 HamwiBio. All Rights Reserved</p>  
-        </div>  
-    </footer>    
-</body>  
+    <footer>
+        <div class="footer-glow"></div>
+        <div class="footer-container">
+            <div class="footer-wrapper">
+                <!-- Contact Section -->
+                <div class="footer-section contact-section">
+                    <div class="section-header">
+                        <h3>Contact Us</h3>
+                        <div class="header-line"></div>
+                    </div>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="icon-email">📧</i>
+                            <p>Email: <a href="mailto:Info@HamwiBio.com">Info@HamwiBio.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="icon-phone">☎️</i>
+                            <p>Phone: <a href="tel:+447984296584">+44 7984 296584</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="icon-phone">☎️</i>
+                            <p>Phone: <a href="tel:+963939149113">+963 939 149 113</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="icon-whatsapp" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.7 4.61 1.91 6.478L4 29l7.72-1.87A11.94 11.94 0 0 0 16 27c6.628 0 12-5.373 12-12S22.629 3 16.001 3zm6.988 17.09c-.297.833-1.474 1.53-2.412 1.73-.641.137-1.478.246-4.297-.921-3.606-1.49-5.93-5.148-6.11-5.39-.178-.242-1.463-1.947-1.463-3.714 0-1.767.928-2.635 1.257-2.997.33-.362.72-.453.96-.453.24 0 .48.002.69.013.221.011.518-.084.81.617.297.716 1.01 2.483 1.098 2.664.089.181.148.394.03.636-.119.242-.178.393-.356.606-.178.212-.373.474-.533.637-.178.181-.363.377-.156.74.208.363.923 1.517 1.98 2.457 1.36 1.211 2.508 1.586 2.87 1.765.363.181.575.15.788-.09.213-.242.906-1.055 1.148-1.417.24-.363.483-.302.813-.181.33.121 2.098.99 2.457 1.17.36.181.6.271.688.423.089.152.089.878-.209 1.71z"/></svg></i>
+                            <p>WhatsApp: <a href="https://wa.me/447984296584">+44 7984 296584</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="icon-whatsapp" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.7 4.61 1.91 6.478L4 29l7.72-1.87A11.94 11.94 0 0 0 16 27c6.628 0 12-5.373 12-12S22.629 3 16.001 3zm6.988 17.09c-.297.833-1.474 1.53-2.412 1.73-.641.137-1.478.246-4.297-.921-3.606-1.49-5.93-5.148-6.11-5.39-.178-.242-1.463-1.947-1.463-3.714 0-1.767.928-2.635 1.257-2.997.33-.362.72-.453.96-.453.24 0 .48.002.69.013.221.011.518-.084.81.617.297.716 1.01 2.483 1.098 2.664.089.181.148.394.03.636-.119.242-.178.393-.356.606-.178.212-.373.474-.533.637-.178.181-.363.377-.156.74.208.363.923 1.517 1.98 2.457 1.36 1.211 2.508 1.586 2.87 1.765.363.181.575.15.788-.09.213-.242.906-1.055 1.148-1.417.24-.363.483-.302.813-.181.33.121 2.098.99 2.457 1.17.36.181.6.271.688.423.089.152.089.878-.209 1.71z"/></svg></i>
+                            <p>WhatsApp: <a href="https://wa.me/963939149113">+963 939 149 113</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="icon-facebook" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M28 16c0-6.627-5.373-12-12-12S4 9.373 4 16c0 5.99 4.388 10.954 10.125 11.854V19.47h-3.047V16h3.047v-2.645c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H19.83c-1.491 0-1.956.925-1.956 1.874V16h3.328l-.532 3.47h-2.796v8.384C23.612 26.954 28 21.99 28 16z"/></svg></i>
+                            <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61574457707075" target="_blank">Dr-Morhaf Al Hamwi</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="footer-section links-section">
+                    <div class="section-header">
+                        <h3>Quick Links</h3>
+                        <div class="header-line"></div>
+                    </div>
+                    <ul class="quick-links">
+                        <li><a href="index.html" class="link-item">Home</a></li>
+                        <li><a href="#aboutUsModal" class="link-item">About</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Section -->
+                <div class="footer-section social-section">
+                    <div class="section-header">
+                        <h3>Follow Us</h3>
+                        <div class="header-line"></div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1A8uS6Db4M/" target="_blank" class="social-icon facebook-icon" title="Facebook">
+                            <svg class="social-icon-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M28 16c0-6.627-5.373-12-12-12S4 9.373 4 16c0 5.99 4.388 10.954 10.125 11.854V19.47h-3.047V16h3.047v-2.645c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H19.83c-1.491 0-1.956.925-1.956 1.874V16h3.328l-.532 3.47h-2.796v8.384C23.612 26.954 28 21.99 28 16z"/></svg>
+                        </a>
+                        <a href="https://www.blogger.com/u/2/blog/posts/1502099121325751896?pli=1" target="_blank" class="social-icon blogger-icon" title="Blogger">
+                            <svg class="social-icon-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M20.667 4H11.333C7.223 4 4 7.223 4 11.333v9.334C4 24.777 7.223 28 11.333 28h9.334C24.777 28 28 24.777 28 20.667v-9.334C28 7.223 24.777 4 20.667 4zM12 10.667h3.333a3.333 3.333 0 0 1 0 6.666H12v-6.666zm0 6.666h8a3.333 3.333 0 0 1 0 6.667h-8v-6.667z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Copyright Bar -->
+        <div class="footer-bottom">
+            <div class="copyright-content">
+                <p>&copy; 2026 HamwiBio. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="aboutUsModal" class="about-modal">
+        <a href="#" class="about-modal-backdrop" aria-label="Close"></a>
+        <div class="about-modal-card">
+            <a href="#" class="about-modal-close" aria-label="Close">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            </a>
+
+            <div class="about-modal-avatar">
+                <img src="img/MBC.jpg" alt="Dr Morhaf Al Hamwi">
+            </div>
+
+            <span class="about-modal-eyebrow">About Us</span>
+            <h2 class="about-modal-name">Dr Morhaf Al Hamwi</h2>
+            <p class="about-modal-role">Ophthalmologist</p>
+
+            <ul class="about-modal-list">
+                <li>
+                    <span class="about-modal-bullet">🔬</span>
+                    <span>Establisher, Al Hamwi BioMedical Research Centre</span>
+                </li>
+                <li>
+                    <span class="about-modal-bullet">🎓</span>
+                    <span>Member of the Royal College of Ophthalmologists / UK</span>
+                </li>
+                <li>
+                    <span class="about-modal-bullet">👁️</span>
+                    <span>Corneal Transplant &amp; Retinopathy Researcher</span>
+                </li>
+                <li>
+                    <span class="about-modal-bullet">🤝</span>
+                    <span>Chairman, Al Madad Medical Charity</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.mobile-nav a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                document.getElementById('navToggle').checked = false;
+            });
+        });
+    </script>
+</body>
 </html>
