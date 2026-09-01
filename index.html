@@ -5,210 +5,405 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AL Hamwi BioMedical Research Centre</title>
     <link rel="icon" href="icon/HamwiBioTB (2).png">
-    <link rel="stylesheet" href="style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <meta name="description" content="Al Hamwi BioMedical Research Centre">
-    <meta name="keywords" content="retinitis,  pigmentosa , RP, therapy , ophthalmic , genetic , RHO, USH2A, RPGR, RP2, RPE65 , gene, mutation , rhodopsin, autosomal , recessive , dominant, Usher, research , royal , college ophthalmologists , rods , cones, DNA , RNA , RPE , vision , peripheral , tunnel, photophobia, Zeaxanthin, Lutein, Triamcinolone, vit A, Luxturna, AAV , FDA , laboratory , ERG , EOG , OCT, PCR , PGM, ophthalmoscope, sequencer , BMJ, JAMA, AAO">
+    <meta name="keywords" content="retinitis, pigmentosa, RP, therapy, ophthalmic, genetic, RHO, USH2A, RPGR, RP2, RPE65, gene, mutation, rhodopsin, autosomal, recessive, dominant, Usher, research, royal college ophthalmologists, rods, cones, DNA, RNA, RPE, vision, peripheral, tunnel, photophobia, Zeaxanthin, Lutein, Triamcinolone, vit A, Luxturna, AAV, FDA, laboratory, ERG, EOG, OCT, PCR, PGM, ophthalmoscope, sequencer, BMJ, JAMA, AAO">
 </head>
-<body>  
-    <header class="navbar" >  
-        <div class="logo">  
-           
-                <img src="icon/HamwiBio.png" alt="HamwiBio Logo">           
-           
-        </div>  
-     <h1>AL Hamwi BioMedical Research Centre</h1>   
-        <nav class="nav-menu">  
-            <ul>  
-                <li><a href="index.html">Home</a></li>  
-                <li><a href="Articles.html">Articles</a></li>  
-                <li><a href="#aboutUsModal">About Us</a></li>  
-            </ul>  
-        </nav>  
-    
-      <div id="aboutUsModal" class="modal">  
-        <div class="modal-content">  
-            <a href="#" class="close">&times;</a>  
-            <h2>About Us</h2>  
-            <p><h3> Dr Morhaf Al Hamwi /
-                Ophthalmologist </h3> <br>
-                - Establisher, Al Hamwi BioMedical Research Centre.  <br>
-                -  Member of the Royal College of Ophthalmologists/ UK. <br>
-               -  Corneal Transplant & Retinopathy Researcher. <br>
-              -   Chairman, Al Madad Medical Charity.</p>  
-        </div>  
-    </div>   
-    </div>   
-    </header>  
-    
-    
+<body>
+    <header class="site-header">
+        <input type="checkbox" id="navToggle" class="nav-toggle-state">
+        <div class="site-header-inner">
+            <a href="index.html" class="brand">
+                <img src="icon/HamwiBio.png" alt="HamwiBio Logo" class="brand-logo">
+                <span class="brand-text">
+                    <span class="brand-title">AL Hamwi</span>
+                    <span class="brand-subtitle">BioMedical Research Centre</span>
+                </span>
+            </a>
 
-    <main>  
-        <section class="hero">  
-            <img src="img/centre.jpg" alt="HBIO" class="hero-image">  
-            <div class="content">  
-                <h1>AL Hamwi BioMedical Research Centre</h1>  
-                <p>Ethical considerations: Our techniques is a crucial role in improving the lives of people around the world and saving countless lives, refraining from providing ineffective or harmful treatments. Non-interventional Cross-Sectional Study were done on patients to improve their quality of life. As an important studies are done on a big number of patients, so that our treatments are allowing them to make their own medical decisions. Our techniques asserts that all patients should be treated equitably. Answering their questions regarding researches from any body will have a significant value for society. We are acting as a compass, guiding the pursuit of scientific knowledge along moral principles, data security, and the balancing of benefits and risks cannot be overstated.</p>  
-                <a href="HealthWebsites.html" class="learn-more">Latest in  Ophthalmic <br> Techniques </a>  
-            </div>  
-        </section>  
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Articles.html">Articles</a></li>
+                    <li><a href="#aboutUsModal">About Us</a></li>
+                </ul>
+            </nav>
+
+            <label for="navToggle" class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <label for="navToggle" class="nav-scrim"></label>
+
+        <nav class="mobile-nav">
+            <label for="navToggle" class="mobile-nav-close" aria-label="Close menu">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            </label>
+            <div class="mobile-nav-brand">
+                <img src="icon/HamwiBio.png" alt="HamwiBio Logo">
+                <span>AL Hamwi BioMedical</span>
+            </div>
+            <ul>
+                <li style="--i:1">
+                    <a href="index.html">
+                        <span class="mobile-nav-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11.5 12 4l8 7.5M6 10v9h12v-9" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                        <span class="mobile-nav-label">Home</span>
+                        <svg class="mobile-nav-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </li>
+                <li style="--i:2">
+                    <a href="Articles.html">
+                        <span class="mobile-nav-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 4h10l4 4v12H5V4z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M9 12h6M9 16h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+                        </span>
+                        <span class="mobile-nav-label">Articles</span>
+                        <svg class="mobile-nav-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </li>
+                <li style="--i:3">
+                    <a href="#aboutUsModal">
+                        <span class="mobile-nav-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="3.2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M5 20c1.2-3.8 4-5.6 7-5.6s5.8 1.8 7 5.6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+                        </span>
+                        <span class="mobile-nav-label">About Us</span>
+                        <svg class="mobile-nav-chevron" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                </li>
+            </ul>
+            <div class="mobile-nav-footer">
+                <a href="mailto:Info@HamwiBio.com">Info@HamwiBio.com</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="hero">
+            <div class="hero-bg" style="background-image: url('img/centre.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-grid-lines"></div>
+
+            <div class="hero-inner">
+                <span class="hero-eyebrow">Pioneering Ophthalmic &amp; Genetic Research</span>
+                <h1 class="hero-title">AL Hamwi <span>BioMedical</span> Research Centre</h1>
+
+                <div class="hero-card">
+                    <p class="hero-text">Ethical considerations: Our techniques play a crucial role in improving the lives of people around the world and saving countless lives, refraining from providing ineffective or harmful treatments. Non-interventional Cross-Sectional Studies were done on patients to improve their quality of life. Important studies are done on a large number of patients, so that our treatments allow them to make their own medical decisions. Our approach asserts that all patients should be treated equitably — acting as a compass, guiding the pursuit of scientific knowledge along moral principles, data security, and the balancing of benefits and risks.</p>
+                </div>
+
+                <a href="HealthWebsites.html" class="hero-cta">
+                    <span>Latest in Ophthalmic Techniques</span>
+                    <svg class="hero-cta-arrow" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+
+            <div class="hero-scroll-cue">
+                <span></span>
+            </div>
+        </section>
     </main>
-    
 
 
-  
-    
-
-    <div class="container1">  
- <div class="news-card8" onclick="location.href='article8.html';">  
-            <div class="line" ></div> 
-            <img src="img/Dr_Morhaf.jpg" alt="News Image" class="news-image" >  
-            <div class="news-content6" >  
-                <h3></h3>  
-                <h2>Dr Morhaf Al Hamwi</h2>  
-                <p>22 June 2026</p>  
-                <span class="read-more">→</span>  
-            </div>  
-        </div>  
-
-
-        <div class="news-card7" onclick="location.href='article7.html';">  
-            <div class="line" ></div> 
-            <img src="img/Flexible Artificial Retina 2026.jpg" alt="News Image" class="news-image" >  
-            <div class="news-content7" >  
-                <h3></h3>  
-                <h2>Flexible Artificial Retina 2026</h2>  
-                <p>31 May 2026</p>  
-                <span class="read-more">→</span>  
-            </div>  
-        </div>  
-
-
- <div class="news-card6" onclick="location.href='article6.html';">  
-            <div class="line" ></div> 
-            <img src="img/Genetic.jpg" alt="News Image" class="news-image" >  
-            <div class="news-content6" >  
-                <h3></h3>  
-                <h2>HamwiBio Genetic Therapy for RP</h2>  
-                <p>16 March 2026</p>  
-                <span class="read-more">→</span>  
-            </div>  
-        </div>  
-
-
-          <div class="news-card5" onclick="location.href='article5.html';">  
-            <div class="line"></div>  
-            <img src="img/OCTBASED2026.jpg" alt="News Image5" class="news-image5">  
-            <div class="news-content5">  
-                <h3></h3>  
-                <h2>OCT Based, Disease Early Detection 2026 </h2>  
-                <p>1 January 2026</p>  
-                <span class="read-more">→</span>  
-            </div>  
+    <section class="news-section">
+        <div class="news-header">
+            <h2>Latest Research &amp; News</h2>
+            <p>Updates from our ophthalmic, genetic-therapy, and retinal research programs.</p>
         </div>
 
-        <div class="news-card" onclick="location.href='article1.html';">  
-            <div class="line" ></div> 
-            <img src="img/IMG-20250331-WA0000.jpg" alt="News Image" class="news-image" >  
-            <div class="news-content" >  
-                <h3></h3>  
-                <h2>Genetic therapy for Retinitis Pigmentosa Patients</h2>  
-                <p>1 April 2025</p>  
-                <span class="read-more">→</span>  
-            </div>  
-        </div>  
+        <div class="news-grid">
+            <article class="story-card" onclick="location.href='article8.html';">
+                <div class="story-thumb">
+                    <img src="img/Dr_Morhaf.jpg" alt="Dr Morhaf Al Hamwi">
+                    <span class="story-date">22 Jun 2026</span>
+                </div>
+                <div class="story-body">
+                    <h3>Dr Morhaf Al Hamwi</h3>
+                    <a class="story-link" href="article8.html">Read more <span>→</span></a>
+                </div>
+            </article>
 
-        <div class="news-card2" onclick="location.href='article2.html';">  
-            <div class="line"></div>   
-            <img src="img/MBC.jpg" alt="News Image2" class="news-image2">  
-            <div class="news-content2">  
-                <h3></h3>  
-                <h2>A special interview on MBC TV</h2>  
-                <p>1 April 2025</p>  
-                <span class="read-more">→</span>  
-            </div>  
+            <article class="story-card" onclick="location.href='article7.html';">
+                <div class="story-thumb">
+                    <img src="img/Flexible Artificial Retina 2026.jpg" alt="Flexible Artificial Retina 2026">
+                    <span class="story-date">31 May 2026</span>
+                </div>
+                <div class="story-body">
+                    <h3>Flexible Artificial Retina 2026</h3>
+                    <a class="story-link" href="article7.html">Read more <span>→</span></a>
+                </div>
+            </article>
+
+            <article class="story-card" onclick="location.href='article6.html';">
+                <div class="story-thumb">
+                    <img src="img/Genetic.jpg" alt="HamwiBio Genetic Therapy for RP">
+                    <span class="story-date">16 Mar 2026</span>
+                </div>
+                <div class="story-body">
+                    <h3>HamwiBio Genetic Therapy for RP</h3>
+                    <a class="story-link" href="article6.html">Read more <span>→</span></a>
+                </div>
+            </article>
+
+            <article class="story-card" onclick="location.href='article5.html';">
+                <div class="story-thumb">
+                    <img src="img/OCTBASED2026.jpg" alt="OCT Based, Disease Early Detection 2026">
+                    <span class="story-date">1 Jan 2026</span>
+                </div>
+                <div class="story-body">
+                    <h3>OCT Based, Disease Early Detection 2026</h3>
+                    <a class="story-link" href="article5.html">Read more <span>→</span></a>
+                </div>
+            </article>
+
+            <article class="story-card" onclick="location.href='article1.html';">
+                <div class="story-thumb">
+                    <img src="img/IMG-20250331-WA0000.jpg" alt="Genetic therapy for Retinitis Pigmentosa Patients">
+                    <span class="story-date">1 Apr 2025</span>
+                </div>
+                <div class="story-body">
+                    <h3>Genetic therapy for Retinitis Pigmentosa Patients</h3>
+                    <a class="story-link" href="article1.html">Read more <span>→</span></a>
+                </div>
+            </article>
+
+            <article class="story-card" onclick="location.href='article2.html';">
+                <div class="story-thumb">
+                    <img src="img/MBC.jpg" alt="A special interview on MBC TV">
+                    <span class="story-date">1 Apr 2025</span>
+                </div>
+                <div class="story-body">
+                    <h3>A special interview on MBC TV</h3>
+                    <a class="story-link" href="article2.html">Read more <span>→</span></a>
+                </div>
+            </article>
+
+            <article class="story-card" onclick="location.href='article3.html';">
+                <div class="story-thumb">
+                    <img src="img/download.png" alt="Multifocal Intra Ocular Lenses">
+                    <span class="story-date">9 Apr 2025</span>
+                </div>
+                <div class="story-body">
+                    <h3>Multifocal Intra Ocular Lenses</h3>
+                    <a class="story-link" href="article3.html">Read more <span>→</span></a>
+                </div>
+            </article>
+
+            <article class="story-card" onclick="location.href='article4.html';">
+                <div class="story-thumb">
+                    <img src="img/lasik2025.jpg" alt="Our latest techniques in LASIK">
+                    <span class="story-date">15 Sep 2025</span>
+                </div>
+                <div class="story-body">
+                    <h3>Our latest techniques in LASIK</h3>
+                    <a class="story-link" href="article4.html">Read more <span>→</span></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="whealth-section">
+        <div class="whealth-header">
+            <h2>Related Global Health Websites</h2>
+            <p>Trusted institutions, colleges, and hospitals shaping global ophthalmic and health research.</p>
+        </div>
+        <div class="whealth-grid">
+            <a href="http://www.nihr.ac.uk" target="_blank" class="whealth-card">
+                <span class="whealth-icon">🔬</span>
+                <span class="whealth-name">National Institute for Health and Care Research (NIHR)</span>
+                <span class="whealth-arrow">↗</span>
+            </a>
+            <a href="http://www.rcophth.ac.uk" target="_blank" class="whealth-card">
+                <span class="whealth-icon">👁️</span>
+                <span class="whealth-name">The Royal College of Ophthalmologists</span>
+                <span class="whealth-arrow">↗</span>
+            </a>
+            <a href="http://www.aao.org" target="_blank" class="whealth-card">
+                <span class="whealth-icon">👁️</span>
+                <span class="whealth-name">American Academy of Ophthalmology</span>
+                <span class="whealth-arrow">↗</span>
+            </a>
+            <a href="http://www.who.int" target="_blank" class="whealth-card">
+                <span class="whealth-icon">🌍</span>
+                <span class="whealth-name">World Health Organization (WHO)</span>
+                <span class="whealth-arrow">↗</span>
+            </a>
+            <a href="http://www.gmc-uk.org" target="_blank" class="whealth-card">
+                <span class="whealth-icon">⚖️</span>
+                <span class="whealth-name">General Medical Council (GMC)</span>
+                <span class="whealth-arrow">↗</span>
+            </a>
+            <a href="http://www.nhs.uk" target="_blank" class="whealth-card">
+                <span class="whealth-icon">🏥</span>
+                <span class="whealth-name">National Health Service (NHS)</span>
+                <span class="whealth-arrow">↗</span>
+            </a>
+            <a href="http://www.hcahealthcare.co.uk" target="_blank" class="whealth-card">
+                <span class="whealth-icon">🏥</span>
+                <span class="whealth-name">HCA Healthcare UK</span>
+                <span class="whealth-arrow">↗</span>
+            </a>
+            <a href="http://www.moorfields.nhs.uk" target="_blank" class="whealth-card">
+                <span class="whealth-icon">👁️</span>
+                <span class="whealth-name">Moorfields Eye Hospital</span>
+                <span class="whealth-arrow">↗</span>
+            </a>
+            <a href="http://www.ox.ac.uk" target="_blank" class="whealth-card">
+                <span class="whealth-icon">🎓</span>
+                <span class="whealth-name">University of Oxford</span>
+                <span class="whealth-arrow">↗</span>
+            </a>
+            <a href="http://www.imperial.ac.uk" target="_blank" class="whealth-card">
+                <span class="whealth-icon">🎓</span>
+                <span class="whealth-name">Imperial College London</span>
+                <span class="whealth-arrow">↗</span>
+            </a>
+            <a href="http://www.cam.ac.uk" target="_blank" class="whealth-card">
+                <span class="whealth-icon">🎓</span>
+                <span class="whealth-name">University of Cambridge</span>
+                <span class="whealth-arrow">↗</span>
+            </a>
+            <a href="http://www.ucl.ac.uk" target="_blank" class="whealth-card">
+                <span class="whealth-icon">🎓</span>
+                <span class="whealth-name">University College London (UCL)</span>
+                <span class="whealth-arrow">↗</span>
+            </a>
+            <a href="http://www.kcl.ac.uk" target="_blank" class="whealth-card">
+                <span class="whealth-icon">🎓</span>
+                <span class="whealth-name">King's College London</span>
+                <span class="whealth-arrow">↗</span>
+            </a>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-glow"></div>
+        <div class="footer-container">
+            <div class="footer-wrapper">
+                <!-- Contact Section -->
+                <div class="footer-section contact-section">
+                    <div class="section-header">
+                        <h3>Contact Us</h3>
+                        <div class="header-line"></div>
+                    </div>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="icon-email">📧</i>
+                            <p>Email: <a href="mailto:Info@HamwiBio.com">Info@HamwiBio.com</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="icon-phone">☎️</i>
+                            <p>Phone: <a href="tel:+447984296584">+44 7984 296584</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="icon-phone">☎️</i>
+                            <p>Phone: <a href="tel:+963939149113">+963 939 149 113</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="icon-whatsapp" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.7 4.61 1.91 6.478L4 29l7.72-1.87A11.94 11.94 0 0 0 16 27c6.628 0 12-5.373 12-12S22.629 3 16.001 3zm6.988 17.09c-.297.833-1.474 1.53-2.412 1.73-.641.137-1.478.246-4.297-.921-3.606-1.49-5.93-5.148-6.11-5.39-.178-.242-1.463-1.947-1.463-3.714 0-1.767.928-2.635 1.257-2.997.33-.362.72-.453.96-.453.24 0 .48.002.69.013.221.011.518-.084.81.617.297.716 1.01 2.483 1.098 2.664.089.181.148.394.03.636-.119.242-.178.393-.356.606-.178.212-.373.474-.533.637-.178.181-.363.377-.156.74.208.363.923 1.517 1.98 2.457 1.36 1.211 2.508 1.586 2.87 1.765.363.181.575.15.788-.09.213-.242.906-1.055 1.148-1.417.24-.363.483-.302.813-.181.33.121 2.098.99 2.457 1.17.36.181.6.271.688.423.089.152.089.878-.209 1.71z"/></svg></i>
+                            <p>WhatsApp: <a href="https://wa.me/447984296584">+44 7984 296584</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="icon-whatsapp" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.001 3C9.373 3 4 8.373 4 15c0 2.386.7 4.61 1.91 6.478L4 29l7.72-1.87A11.94 11.94 0 0 0 16 27c6.628 0 12-5.373 12-12S22.629 3 16.001 3zm6.988 17.09c-.297.833-1.474 1.53-2.412 1.73-.641.137-1.478.246-4.297-.921-3.606-1.49-5.93-5.148-6.11-5.39-.178-.242-1.463-1.947-1.463-3.714 0-1.767.928-2.635 1.257-2.997.33-.362.72-.453.96-.453.24 0 .48.002.69.013.221.011.518-.084.81.617.297.716 1.01 2.483 1.098 2.664.089.181.148.394.03.636-.119.242-.178.393-.356.606-.178.212-.373.474-.533.637-.178.181-.363.377-.156.74.208.363.923 1.517 1.98 2.457 1.36 1.211 2.508 1.586 2.87 1.765.363.181.575.15.788-.09.213-.242.906-1.055 1.148-1.417.24-.363.483-.302.813-.181.33.121 2.098.99 2.457 1.17.36.181.6.271.688.423.089.152.089.878-.209 1.71z"/></svg></i>
+                            <p>WhatsApp: <a href="https://wa.me/963939149113">+963 939 149 113</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="icon-facebook" aria-hidden="true"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M28 16c0-6.627-5.373-12-12-12S4 9.373 4 16c0 5.99 4.388 10.954 10.125 11.854V19.47h-3.047V16h3.047v-2.645c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H19.83c-1.491 0-1.956.925-1.956 1.874V16h3.328l-.532 3.47h-2.796v8.384C23.612 26.954 28 21.99 28 16z"/></svg></i>
+                            <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61574457707075" target="_blank">Dr-Morhaf Al Hamwi</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links Section -->
+                <div class="footer-section links-section">
+                    <div class="section-header">
+                        <h3>Quick Links</h3>
+                        <div class="header-line"></div>
+                    </div>
+                    <ul class="quick-links">
+                        <li><a href="index.html" class="link-item">Home</a></li>
+                        <li><a href="#aboutUsModal" class="link-item">About</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Section -->
+                <div class="footer-section social-section">
+                    <div class="section-header">
+                        <h3>Follow Us</h3>
+                        <div class="header-line"></div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/share/1A8uS6Db4M/" target="_blank" class="social-icon facebook-icon" title="Facebook">
+                            <svg class="social-icon-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M28 16c0-6.627-5.373-12-12-12S4 9.373 4 16c0 5.99 4.388 10.954 10.125 11.854V19.47h-3.047V16h3.047v-2.645c0-3.007 1.792-4.669 4.533-4.669 1.313 0 2.686.235 2.686.235v2.953H19.83c-1.491 0-1.956.925-1.956 1.874V16h3.328l-.532 3.47h-2.796v8.384C23.612 26.954 28 21.99 28 16z"/></svg>
+                        </a>
+                        <a href="https://www.blogger.com/u/2/blog/posts/1502099121325751896?pli=1" target="_blank" class="social-icon blogger-icon" title="Blogger">
+                            <svg class="social-icon-svg" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M20.667 4H11.333C7.223 4 4 7.223 4 11.333v9.334C4 24.777 7.223 28 11.333 28h9.334C24.777 28 28 24.777 28 20.667v-9.334C28 7.223 24.777 4 20.667 4zM12 10.667h3.333a3.333 3.333 0 0 1 0 6.666H12v-6.666zm0 6.666h8a3.333 3.333 0 0 1 0 6.667h-8v-6.667z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="news-card3" onclick="location.href='article3.html';">  
-            <div class="line"></div>  
-            <img src="img/download.png" alt="News Image2" class="news-image3">  
-            <div class="news-content3">  
-                <h3></h3>  
-                <h2>Multifocal Intra Ocular Lenses </h2>  
-                <p>9 April 2025</p>  
-                <span class="read-more">→</span>  
-            </div>  
+        <!-- Bottom Copyright Bar -->
+        <div class="footer-bottom">
+            <div class="copyright-content">
+                <p>&copy; 2026 HamwiBio. All Rights Reserved</p>
+            </div>
         </div>
+    </footer>
 
-         <div class="news-card4" onclick="location.href='article4.html';">  
-            <div class="line"></div>  
-            <img src="img/lasik2025.jpg" alt="News Image2" class="news-image3">  
-            <div class="news-content4">  
-                <h3></h3>  
-                <h2>Our latest techniques in LASIK </h2>  
-                <p>15 sep 2025</p>  
-                <span class="read-more">→</span>  
-            </div>  
+    <div id="aboutUsModal" class="about-modal">
+        <a href="#" class="about-modal-backdrop" aria-label="Close"></a>
+        <div class="about-modal-card">
+            <a href="#" class="about-modal-close" aria-label="Close">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+            </a>
+
+            <div class="about-modal-avatar">
+                <img src="img/MBC.jpg" alt="Dr Morhaf Al Hamwi">
+            </div>
+
+            <span class="about-modal-eyebrow">About Us</span>
+            <h2 class="about-modal-name">Dr Morhaf Al Hamwi</h2>
+            <p class="about-modal-role">Ophthalmologist</p>
+
+            <ul class="about-modal-list">
+                <li>
+                    <span class="about-modal-bullet">🔬</span>
+                    <span>Establisher, Al Hamwi BioMedical Research Centre</span>
+                </li>
+                <li>
+                    <span class="about-modal-bullet">🎓</span>
+                    <span>Member of the Royal College of Ophthalmologists / UK</span>
+                </li>
+                <li>
+                    <span class="about-modal-bullet">👁️</span>
+                    <span>Corneal Transplant &amp; Retinopathy Researcher</span>
+                </li>
+                <li>
+                    <span class="about-modal-bullet">🤝</span>
+                    <span>Chairman, Al Madad Medical Charity</span>
+                </li>
+            </ul>
         </div>
     </div>
 
-    <div class="wcontainer">  
-        <h1>Related Global Health Websites </h1>  
-        <ul class="links">  
-            <li> <a href="http://www.nihr.ac.uk">National Institute for Health and Care Research (NIHR)</a></li>  
-            <li><a href="http://www.rcophth.ac.uk">The Royal College of Ophthalmologists </a></li>  
-            <li><a href="http://www.aao.org">American Academy of Ophthalmology</a></li>  
-            <li><a href="http://www.who.int">World Health Organization (WHO)</a></li>  
-            <li><a href="http://www.gmc-uk.org">General Medical Council (GMC)</a></li>  
-            <li><a href="http://www.nhs.uk">National Health Service (NHS)</a></li>  
-            <li><a href="http://www.hcahealthcare.co.uk">HCA Healthcare UK</a></li>  
-            <li><a href="http://www.moorfields.nhs.uk">Moorfields Eye Hospital</a></li>  
-            <li><a href="http://www.ox.ac.uk">University of Oxford</a></li>  
-            <li><a href="http://www.imperial.ac.uk">Imperial College London</a></li>  
-            <li><a href="http://www.cam.ac.uk">University of Cambridge</a></li>  
-            <li><a href="http://www.ucl.ac.uk">University College London (UCL)</a></li>  
-            <li><a href="http://www.kcl.ac.uk">King's College London</a></li>  
-        </ul>  
-    </div>  
-    
-    <footer>  
-        <div class="container">  
-          <div class="footer-content">  
-                <h3>Contact Us</h3>  
-            <div class="cu">
-                    <p>Email: <a href="mailto:Info@HamwiBio.com">Info@HamwiBio.com</a></p> 
-               <p>Phone: <a href="tel:+447984296584">+44 7984 296584</a></p>
-                <p>Phone: <a href="tel:+963939149113">+963 939 149 113</a></p>  
-                  <p>WhatsApp: <a href="https://wa.me/447984296584">+44 7984 296584</a></p>
-                <p>WhatsApp: <a href="https://wa.me/963939149113">+963 939 149 113</a></p>
-                <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61574457707075" target="_blank">Dr-Morhaf Al Hamwi</a></p>
-           </div> 
-        </div>    
-
-
-              <div class="footer-links">  
-                <div class="quick-links">
-                <h3>Quick Links</h3>  
-                <ul class="list">  
-                    <li><a href="index.html">Home</a></li>  
-                    <li><a href="#aboutUsModal">About</a></li>  
-                </ul>  
-            </div>
-             </div>  
-          
-            <div class="social-media">  
-                <h3>Follow Us</h3>  
-                <a href="https://www.facebook.com/share/1A8uS6Db4M/" target="_blank">  
-                    <img src="icon/facebook_logo_icon_147291.png" alt="Facebook" />  
-                </a>  
-                <a href="https://www.blogger.com/u/2/blog/posts/1502099121325751896?pli=1" target="_blank">  
-                    <img src="icon/blogger-icon.png" alt="Blogger" />  
-                </a>  
-            </div>  
-        </div> 
-
-        <div class="bottom-bar">  
-            <p>&copy; 2026 HamwiBio. All Rights Reserved</p>  
-        </div>  
-    </footer>  
-</body>  
+    <script>
+        document.querySelectorAll('.mobile-nav a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                document.getElementById('navToggle').checked = false;
+            });
+        });
+    </script>
+</body>
 </html>
