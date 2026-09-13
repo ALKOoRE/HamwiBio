@@ -1,5 +1,6 @@
 html {
   overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
   touch-action: pan-y;
   overscroll-behavior-x: none;
@@ -15,6 +16,7 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-x: clip;
   touch-action: pan-y;
   overscroll-behavior-x: none;
   font-family: Arial, sans-serif;
