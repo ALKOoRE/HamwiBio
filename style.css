@@ -620,6 +620,18 @@ body {
   padding: 6rem 1.5rem 4rem;
 }
 
+/* Used on other pages that set a background photo directly on the hero
+   (e.g. via style="background-image:url(...)") rather than the framed
+   <img> approach used on the homepage below. */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.1) brightness(1.05) contrast(1.03);
+  z-index: 0;
+}
+
 .hero-image-frame {
   position: relative;
   width: 100%;
