@@ -692,10 +692,10 @@ body {
 .hero-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(70px);
   z-index: 1;
   opacity: 0.55;
   pointer-events: none;
+  will-change: transform;
 }
 
 .hero-orb-1 {
@@ -703,7 +703,7 @@ body {
   height: 420px;
   top: -10%;
   left: -8%;
-  background: radial-gradient(circle, rgba(225, 145, 74, 0.5), transparent 70%);
+  background: radial-gradient(circle, rgba(225, 145, 74, 0.35) 0%, rgba(225, 145, 74, 0.12) 45%, transparent 72%);
   animation: orbFloat 12s ease-in-out infinite;
 }
 
@@ -712,7 +712,7 @@ body {
   height: 380px;
   bottom: -12%;
   right: -6%;
-  background: radial-gradient(circle, rgba(116, 173, 235, 0.45), transparent 70%);
+  background: radial-gradient(circle, rgba(116, 173, 235, 0.32) 0%, rgba(116, 173, 235, 0.1) 45%, transparent 72%);
   animation: orbFloat 14s ease-in-out infinite reverse;
 }
 
@@ -756,12 +756,6 @@ body {
     linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 48px 48px;
   mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 20%, transparent 75%);
-  animation: gridDrift 40s linear infinite;
-}
-
-@keyframes gridDrift {
-  from { background-position: 0 0, 0 0; }
-  to { background-position: 96px 96px, 96px 96px; }
 }
 
 .hero-inner {
@@ -793,7 +787,7 @@ body {
   border-radius: 999px;
   margin-bottom: 1.6rem;
   opacity: 0;
-  animation: fadeInUp 0.7s ease-out 0.05s both, eyebrowGlow 3.2s ease-in-out 1.2s infinite;
+  animation: fadeInUp 0.7s ease-out 0.05s both, eyebrowGlow 3.2s ease-in-out 1.2s 2;
 }
 
 @keyframes eyebrowGlow {
@@ -838,7 +832,7 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: heroTitleShimmer 7s linear infinite;
+  animation: heroTitleShimmer 4s linear 2;
 }
 
 @keyframes heroTitleShimmer {
@@ -854,11 +848,11 @@ body {
   background-size: 100% 100%, 220% 220%;
   border: 1px solid transparent;
   border-radius: 20px;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(6px);
   padding: 1.75rem 2.25rem;
   margin-bottom: 2.25rem;
   opacity: 0;
-  animation: fadeInUp 0.9s ease-out 0.55s both, cardBorderFlow 10s linear infinite;
+  animation: fadeInUp 0.9s ease-out 0.55s both, cardBorderFlow 6s linear 2;
 }
 
 @keyframes cardBorderFlow {
@@ -886,7 +880,7 @@ body {
 .hero-text-lead {
   color: #ffd8b0;
   font-weight: 700;
-  animation: heroLeadGlow 3s ease-in-out 1.8s infinite;
+  animation: heroLeadGlow 3s ease-in-out 1.8s 2;
 }
 
 @keyframes heroLeadGlow {
